@@ -1,0 +1,514 @@
+<!--
+
+The dashboard is for monitoring the training process.
+The running process will connect to the Firebase and send updates.
+The script here would listen to those updates and show them.
+
+Completely optinal but, good to have.
+
+-->
+
+<html>
+
+    <head>
+
+        <title>MatchProx Dashboard</title>
+        <link rel="icon" href="favicon.ico">
+
+        <style>
+
+            body
+            {
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+            }
+
+            #title
+            {
+                color: lightcoral;
+                font-size: 36px;
+                margin-bottom: 10px;
+                padding: 0px 10px 10px 10px;
+                border-bottom: 4px solid darkcyan;
+            }
+
+            #stop-button
+            {
+                padding: 5px;
+                color: lightcoral;
+                background-color: white;
+                border: 2px solid lightcoral;
+                border-radius: 5px;
+                font-size: 18px;
+                float: right;
+                width: 100px;
+                margin-top: 5px;
+                cursor: pointer;
+            }
+
+            #stop-button:hover
+            {
+                color: coral;
+                background-color: rgba(255, 128, 128, 0.1);
+            }
+
+            #content
+            {
+                display: flex;
+                flex-direction: row;
+                height: 640px;
+            }
+
+            #left-content
+            {
+                border-right: 2px solid darkcyan;
+                width: 350px;
+                height: 100%;
+            }
+
+            #right-content
+            {
+                width: 100%;
+                height: 100%;
+            }
+
+            #tab-select
+            {
+                border-radius: 8px; 
+                border: 2px solid lightcoral;
+                color: lightcoral;
+                width: 80%;
+                padding: 5px;
+                margin: 10px 10%;
+                font-size: 18px;
+                text-align: center;
+            }
+
+            #vars
+            {
+                width: 80%;
+                height: 580px;
+                padding: 5px;
+                margin: 10px 10%;
+                font-size: 16px;
+                overflow: hidden;
+            }
+
+            table
+            {
+                width: 90%;
+                height: 100%;
+                margin: 10px 5%;
+                text-align: center;
+            }
+
+            td
+            {
+                width: 25%;
+                max-height: 25%;
+                padding: 5px;
+            }
+
+            .chart
+            {
+                width: 100%;
+                max-width: 100%;
+                min-height: 100%;
+                border: 2px solid lightcoral;
+            }
+
+        </style>
+
+    </head>
+
+    <body>
+
+        <div id="title">
+
+            <span>MatchProx</span>
+            <button id="stop-button" onclick="stop()">stop</button>
+
+        </div>
+
+        <div id="content">
+
+            <div id="left-content">
+
+                <select id="tab-select">
+                    <option clas="tab-option" value="global">Global</option>
+                </select>
+
+                <pre id="vars">
+                </pre>
+
+            </div>
+
+            <div id="right-content">
+
+                <table id="charts">
+
+                    <tr>
+                        <td>Local Accuracy</td>
+                        <td>Local Loss</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <canvas id="local-acc-chart" class="chart">
+                            </canvas>
+                        </td>
+
+                        <td>
+                            <canvas id="local-loss-chart" class="chart">
+                            </canvas>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Global Accuracy</td>
+                        <td>Global Loss</td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <canvas id="global-acc-chart" class="chart">
+                            </canvas>
+                        </td>
+
+                        <td>
+                            <canvas id="global-loss-chart" class="chart">
+                            </canvas>
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+        </script>
+
+        <script type="module">
+
+            import {initializeApp} from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-app.js'
+            import {getDatabase, ref, onValue} from 'https://www.gstatic.com/firebasejs/9.22.1/firebase-database.js'
+
+            var current_tab = "global";
+
+            // ========================= connect to the database =========================================
+
+            const firebaseConfig = {
+                "!!!REDACTED!!!"
+            };
+
+            initializeApp(firebaseConfig);
+            const db = getDatabase();
+
+            // ===========================================================================================
+
+            class Text
+            {
+                constructor(container)
+                {
+                    this.container = document.getElementById(container);
+                }
+
+                update(data)
+                {
+                    this.container.innerHTML = data;
+                }
+            }
+
+            var text = new Text("vars");
+
+            // ============================================================================================
+
+            class Plot
+            {
+                constructor(container, containers)
+                {
+                    this.container = document.getElementById(container);
+                    this.charts = new Array(containers.length);
+
+                    for(let i=0; i<containers.length; i++)
+
+                        this.charts[i] = new Chart(
+                            containers[i],
+                            {
+                                type: "line",
+                                data: {datasets: [{data: []}]},
+                                options: {legend: {display: false}}
+                            }
+                        );
+                }
+
+                update(data)
+                {
+                    for(let i=0; i<data.length; i++)
+                    {
+                        this.charts[i].data.labels = Array.from(
+                            Array(data[i].length).keys()
+                        );
+                        
+                        this.charts[i].data.datasets.forEach((dataset) => {
+                            dataset.data = data[i];
+                        });
+
+                        this.charts[i].update();
+                    }
+                }
+            }
+
+            var plots = new Plot(
+                "charts",
+                [
+                    "local-acc-chart",
+                    "local-loss-chart",
+                    "global-acc-chart",
+                    "global-loss-chart"
+                ]
+            );
+
+            // ============================================================================================
+
+            function zipAndMapToAvg(lists) 
+            {
+                const minLength = Math.min(...lists.map(list => list.length));
+                const zippedList = [];
+            
+                for (let i = 0; i < minLength; i++) 
+                {
+                const elements = lists.map(list => list[i]);
+                const sum = elements.reduce((acc, val) => acc + val, 0);
+                const avg = sum / Math.max(1, elements.length);
+                zippedList.push(avg);
+                }
+            
+                return zippedList;
+            }
+            
+
+            class Global
+            {
+                constructor()
+                {
+                    this.num_devices = 0;
+                    this.shares = 0;
+                    this.total_rounds = "0";
+                    
+                    this.local_acc = [];
+                    this.local_loss = [];
+                    this.global_acc = [];
+                    this.global_loss = [];
+
+                    this.text = "";
+                    this.devices = {};
+
+                    onValue(ref(db, 'entries'), (snapshot) => {
+
+                        let data = snapshot.val();
+                    
+                        for(let key in data)
+                        {
+                            let element = data[key];
+                            if(!(element in this.devices))
+                            {
+                                this.devices[element] = new Device(element, db);
+                                this.num_devices += 1;
+
+                                let option = document.createElement("option");
+                                option.setAttribute("class", "tab-option");
+                                option.setAttribute("value", element);
+                                option.innerHTML = element;
+
+                                document.getElementById("tab-select").appendChild(option);
+                            }
+                        }
+
+                        this.update();
+                    });
+
+                    onValue(ref(db, 'total_rounds'), (snapshot) => {
+
+                        let data = snapshot.val();
+                        this.total_rounds = data;
+
+                        this.update();
+                    });
+                }
+
+                update()
+                {
+                    try
+                    {
+                        this.shares = 0;
+                        this.round = 0;
+
+                        let temp = [];
+                        for(let ip in this.devices) temp.push(this.devices[ip].local_acc);
+                        this.local_acc = zipAndMapToAvg(temp);
+
+                        temp = [];
+                        for(let ip in this.devices) temp.push(this.devices[ip].local_loss);
+                        this.local_loss = zipAndMapToAvg(temp);
+
+                        temp = [];
+                        for(let ip in this.devices) temp.push(this.devices[ip].global_acc);
+                        this.global_acc = zipAndMapToAvg(temp);
+
+                        temp = [];
+                        for(let ip in this.devices) temp.push(this.devices[ip].global_loss);
+                        this.global_loss = zipAndMapToAvg(temp);
+
+                        for(let ip in this.devices)
+                        {
+                            this.shares += this.devices[ip].shares;
+                            this.round += parseInt(this.devices[ip].round);
+                        }
+
+                        this.round /= Math.max(Object.keys(this.devices ).length, 1);
+
+                        this.text = (
+                            "devices     : " + this.num_devices + "<br><br><br>" +
+                            "round       : " + Math.round(this.round * 100) / 100 + " / " + this.total_rounds + "<br><br>" +
+                            "shares      : " + this.shares + "<br><br><br>" +
+                            "local_acc   : " + Math.round(this.local_acc[this.local_acc.length-1] * 10000) / 10000 + "<br><br>" +
+                            "global_acc  : " + Math.round(this.global_acc[this.global_acc.length-1] * 10000) / 10000 + "<br><br><br>" +
+                            "local_loss  : " + Math.round(this.local_loss[this.local_loss.length-1] * 10000) / 10000 + "<br><br>" +
+                            "global_loss : " + Math.round(this.global_loss[this.global_loss.length-1] * 10000) / 10000
+                        );
+
+                        if(current_tab == "global")
+                        {
+                            text.update(this.text);
+                            plots.update([
+                                this.local_acc,
+                                this.local_loss,
+                                this.global_acc,
+                                this.global_loss
+                            ])
+                        }
+                    }
+                    catch(error){}
+                }
+            }
+
+            // ============================================================================================
+
+            class Device
+            {
+                constructor(id, db)
+                {
+                    this.id = id;
+                    this.updated = true;
+
+                    this.round = "";
+                    this.shares = 0;
+
+                    this.text = "";
+                    
+                    this.local_acc = [0];
+                    this.local_loss = [0];
+                    this.global_acc = [0];
+                    this.global_loss = [0];
+
+                    this.ref = ref(db, this.id);
+                    onValue(this.ref, (snapshot) => {
+
+                        this.update(snapshot.val());
+
+                    });
+                }
+
+                update(data)
+                {
+                    try
+                    {
+                        this.round = data['round'];
+                        this.shares = data['shares'];
+
+                        this.local_acc = data['local_acc'];
+                        this.local_loss = data['local_loss'];
+                        this.global_acc = data['global_acc'];
+                        this.global_loss = data['global_loss'];
+
+                        this.text = (
+                            "ip          : " + this.id + "<br><br><br>" +
+                            "round       : " + Math.round(this.round * 100) / 100 + " / " + global.total_rounds + "<br><br>" +
+                            "shares      : " + this.shares + "<br><br><br>" +
+                            "local_acc   : " + Math.round(this.local_acc[this.local_acc.length-1] * 10000) / 10000 + "<br><br>" +
+                            "global_acc  : " + Math.round(this.global_acc[this.global_acc.length-1] * 10000) / 10000 + "<br><br><br>" +
+                            "local_loss  : " + Math.round(this.local_loss[this.local_loss.length-1] * 10000) / 10000 + "<br><br>" +
+                            "global_loss : " + Math.round(this.global_loss[this.global_loss.length-1] * 10000) / 10000
+                        );
+
+                        global.update();
+
+                        if(current_tab == this.id)
+                        {
+                            text.update(this.text);
+                            plots.update([
+                                this.local_acc,
+                                this.local_loss,
+                                this.global_acc,
+                                this.global_loss
+                            ])
+                        }
+                    }
+                    catch(error){}
+                }
+            }
+
+            var global = new Global(db);
+
+            // ========================================================================================
+
+            var tab_select = document.getElementById("tab-select");
+            tab_select.onchange = function(){
+
+                current_tab = tab_select.value;
+
+                if(current_tab == "global")
+                {
+                    text.update(global.text);
+                    plots.update([
+                        global.local_acc,
+                        global.local_loss,
+                        global.global_acc,
+                        global.global_loss
+                    ]);
+
+                    global.update();
+
+                    return;
+                }
+
+                let device = global.devices[tab_select.value];
+                text.update(device.text);
+                plots.update([
+                    device.local_acc,
+                    device.local_loss,
+                    device.global_acc,
+                    device.global_loss
+                ]);
+            }
+
+            current_tab = tab_select.value;
+            text.update(global.text);
+            plots.update([
+                global.local_acc,
+                global.local_loss,
+                global.global_acc,
+                global.global_loss
+            ]);
+
+        </script>
+
+    </body>
+
+</html>

@@ -1,0 +1,49 @@
+{
+    "is_simulation": "True",
+
+    "ip": "",
+    "tcp_port": 4000,
+    "udp_port": 4001,
+
+    "certificate": "!!!REDACTED!!!",
+    "database_url": "!!!REDACTED!!!",
+
+    "decomposition": "matcha",
+    "activations": "random",
+    "comm_budget": 1.0,
+
+    "mode": "sync",
+    "stragglers": 0.5,
+    "lag": 1,
+
+    "model": "MLP",
+    "model_args": [],
+
+    "num_rounds": 50,
+    "num_epochs": 10,
+    "num_seconds": -1,
+    "batch_size": 128,
+    "input_shape": [28, 28, 1], 
+    "num_outputs": 10, 
+    "learning_rate": 0.01,
+    "l2_term": 0,
+    "prox_term": 0,
+    "curv_term": 0,
+
+    "train_files": "../../datasets/mnist/train/",
+    "test_files": "../../datasets/mnist/test/",
+    "label_distribution": 2,
+    "sample_distribution": 0.5,
+
+    "random_preset": "../../_random_presets/random_preset_1.b",
+    "graph_preset": "../../_graph_presets/dense_graph.b",
+    "model_preset": "../../_model_presets/mclr_preset_1.b",
+
+    "logs_location": "../../logs/final/",
+    "results_location": "../../results/final",
+    "stdout": "False",
+    "clear_logs": "True",
+    "ignore_logger": "False",
+    "ignore_database": "True",
+    "sync_delay": 10
+}

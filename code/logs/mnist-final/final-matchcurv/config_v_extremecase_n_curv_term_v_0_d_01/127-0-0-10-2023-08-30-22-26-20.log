@@ -1,0 +1,357 @@
+(2023-08-30 22:26:20,957) Comm.responder> Started responding
+(2023-08-30 22:26:20,958) Comm.tcp_listener> Started listening for TCP packets at port 4000.
+(2023-08-30 22:26:20,958) Device.start> Device started listening and responding.
+(2023-08-30 22:26:20,958) Comm.udp_listener> Started listening for UDP packets at port 4001.
+(2023-08-30 22:26:20,958) Device.start_the_music> ybin'....
+(2023-08-30 22:26:20,959) Device.start_the_music> is_simulation: True
+(2023-08-30 22:26:20,959) Device.start_the_music> ip: 
+(2023-08-30 22:26:20,959) Device.start_the_music> tcp_port: 4000
+(2023-08-30 22:26:20,959) Device.start_the_music> udp_port: 4001
+(2023-08-30 22:26:20,959) Device.start_the_music> certificate: ../../_db_cert/matchprox-firebase-adminsdk-gms4p-0bf46bc35b.json
+(2023-08-30 22:26:20,959) Device.start_the_music> database_url: https://matchprox-default-rtdb.europe-west1.firebasedatabase.app/
+(2023-08-30 22:26:20,959) Device.start_the_music> decomposition: matcha
+(2023-08-30 22:26:20,959) Device.start_the_music> activations: matcha
+(2023-08-30 22:26:20,959) Device.start_the_music> comm_budget: 0.25
+(2023-08-30 22:26:20,959) Device.start_the_music> mode: sync
+(2023-08-30 22:26:20,959) Device.start_the_music> stragglers: 0.5
+(2023-08-30 22:26:20,959) Device.start_the_music> lag: 1
+(2023-08-30 22:26:20,959) Device.start_the_music> model: MLP
+(2023-08-30 22:26:20,959) Device.start_the_music> model_args: []
+(2023-08-30 22:26:20,959) Device.start_the_music> num_rounds: 20
+(2023-08-30 22:26:20,959) Device.start_the_music> num_epochs: 50
+(2023-08-30 22:26:20,959) Device.start_the_music> num_seconds: 1
+(2023-08-30 22:26:20,960) Device.start_the_music> batch_size: 128
+(2023-08-30 22:26:20,960) Device.start_the_music> input_shape: [28, 28, 1]
+(2023-08-30 22:26:20,960) Device.start_the_music> num_outputs: 10
+(2023-08-30 22:26:20,960) Device.start_the_music> learning_rate: 0.01
+(2023-08-30 22:26:20,960) Device.start_the_music> l2_term: 0
+(2023-08-30 22:26:20,960) Device.start_the_music> prox_term: 0
+(2023-08-30 22:26:20,960) Device.start_the_music> curv_term: 0.01
+(2023-08-30 22:26:20,960) Device.start_the_music> train_files: ../../datasets/mnist/train/
+(2023-08-30 22:26:20,960) Device.start_the_music> test_files: ../../datasets/mnist/test/
+(2023-08-30 22:26:20,960) Device.start_the_music> label_distribution: 2
+(2023-08-30 22:26:20,960) Device.start_the_music> sample_distribution: 0.5
+(2023-08-30 22:26:20,960) Device.start_the_music> random_preset: ../../_random_presets/random_preset_2.b
+(2023-08-30 22:26:20,960) Device.start_the_music> graph_preset: ../../_graph_presets/sparse_graph.b
+(2023-08-30 22:26:20,960) Device.start_the_music> model_preset: ../../_model_presets/mclr_preset_1.b
+(2023-08-30 22:26:20,960) Device.start_the_music> logs_location: ../../logs/mnist-final/final-matchcurv/config_v_extremecase_n_curv_term_v_0_d_01/
+(2023-08-30 22:26:20,960) Device.start_the_music> results_location: ../../results/mnist-final/final-matchcurv/config_v_extremecase_n_curv_term_v_0_d_01/
+(2023-08-30 22:26:20,960) Device.start_the_music> stdout: False
+(2023-08-30 22:26:20,960) Device.start_the_music> clear_logs: True
+(2023-08-30 22:26:20,961) Device.start_the_music> ignore_logger: False
+(2023-08-30 22:26:20,961) Device.start_the_music> ignore_database: True
+(2023-08-30 22:26:20,961) Device.start_the_music> sync_delay: 10
+(2023-08-30 22:26:20,961) Comm.broadcast> Broadcasting <Whammo!> packet from 127.0.0.10:0 [Sent].
+(2023-08-30 22:26:20,961) Graph.add_edge> Added edge from 127.0.0.1 to 127.0.0.2
+(2023-08-30 22:26:20,961) Graph.add_edge> Added edge from 127.0.0.2 to 127.0.0.7
+(2023-08-30 22:26:20,961) Graph.add_edge> Added edge from 127.0.0.3 to 127.0.0.4
+(2023-08-30 22:26:20,961) Graph.add_edge> Added edge from 127.0.0.4 to 127.0.0.10
+(2023-08-30 22:26:20,961) Graph.add_edge> Added edge from 127.0.0.4 to 127.0.0.5
+(2023-08-30 22:26:20,961) Graph.add_edge> Added edge from 127.0.0.4 to 127.0.0.7
+(2023-08-30 22:26:20,961) Comm.recv_udp_packet> Receiving <Whammo!> packet from 127.0.0.4:0 [Received].
+(2023-08-30 22:26:20,962) Graph.add_edge> Added edge from 127.0.0.5 to 127.0.0.8
+(2023-08-30 22:26:20,962) Graph.add_edge> Added edge from 127.0.0.6 to 127.0.0.7
+(2023-08-30 22:26:20,962) Graph.add_edge> Added edge from 127.0.0.7 to 127.0.0.9
+(2023-08-30 22:26:20,962) Graph.create_random> Graph created with 10 nodes and 9 edges.
+(2023-08-30 22:26:20,962) Device.start_the_music> Neighbors: [127.0.0.4]
+(2023-08-30 22:26:20,962) Graph.decompose> Decomposing graph with method: matcha.
+(2023-08-30 22:26:20,963) Graph.decompose> Created 4 subgraphs (total_edges: 9).
+(2023-08-30 22:26:20,963) Graph.decompose> Subgraphs: 
+| subgraph-0 (\w 3 edges): [127.0.0.5->127.0.0.8, 127.0.0.1->127.0.0.2, 127.0.0.7->127.0.0.4]
+| subgraph-1 (\w 2 edges): [127.0.0.2->127.0.0.7, 127.0.0.3->127.0.0.4]
+| subgraph-2 (\w 2 edges): [127.0.0.7->127.0.0.6, 127.0.0.4->127.0.0.10]
+| subgraph-3 (\w 2 edges): [127.0.0.7->127.0.0.9, 127.0.0.4->127.0.0.5]
+(2023-08-30 22:26:20,963) Graph.compute_probabilities> Computing probabilities with method: matcha and budget: 0.2500.
+(2023-08-30 22:26:20,989) Graph.compute_probabilities> l2: 0.0711, Comm ratio: 0.2500
+(2023-08-30 22:26:20,989) Graph.compute_probabilities> Probabilities: 
+| subgraph-0 (\w 3 edges): 0.42415504
+| subgraph-1 (\w 2 edges): 0.22936877
+| subgraph-2 (\w 2 edges): 0.11705643
+| subgraph-3 (\w 2 edges): 0.22941976
+(2023-08-30 22:26:20,989) Model.preheat> Preheating files: 
+| [../../datasets/mnist/train/label_7.b, ../../datasets/mnist/train/label_3.b][0.50:1.00] 
+| [../../datasets/mnist/test/label_9.b, ../../datasets/mnist/test/label_0.b, ../../datasets/mnist/test/label_5.b, ../../datasets/mnist/test/label_2.b, ../../datasets/mnist/test/label_4.b, ../../datasets/mnist/test/label_6.b, ../../datasets/mnist/test/label_8.b, ../../datasets/mnist/test/label_1.b, ../../datasets/mnist/test/label_7.b, ../../datasets/mnist/test/label_3.b]
+(2023-08-30 22:26:25,964) Comm.send> Sending <ACK: Whammo!> packet from 127.0.0.10:0 to 127.0.0.4:4000 [Sent].
+(2023-08-30 22:26:25,964) Comm.recv_tcp_packet> Receiving <ACK: Whammo!> packet from 127.0.0.4:0 [Received].
+(2023-08-30 22:26:37,166) Device.start_the_music> Training round {1} of {20}
+(2023-08-30 22:26:37,166) Model.train> Training for 50 epochs.
+(2023-08-30 22:27:14,641) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:27:14,803) Model.test> Training finished with (acc, loss): {0.98225522}, {0.05824814}.
+(2023-08-30 22:27:14,803) Graph.get_activations> Activating 1 subgraphs with 3 edges.
+(2023-08-30 22:27:14,803) Graph.get_activations> Activations: 
+| subgraph-0 (\w 0.42415504 probability): [127.0.0.5->127.0.0.8, 127.0.0.1->127.0.0.2, 127.0.0.7->127.0.0.4]
+(2023-08-30 22:27:14,804) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:27:14,804) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:27:14,804) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:27:15,224) Device.roll_call> Waiting for: 
+(2023-08-30 22:27:15,224) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:27:15,373) Model.test> Testing finished with (acc, loss): {0.19910000}, {6.68958282}.
+(2023-08-30 22:27:15,375) Device.start_the_music> Training round {2} of {20}
+(2023-08-30 22:27:15,375) Model.train> Training for 50 epochs.
+(2023-08-30 22:27:51,320) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:27:51,476) Model.test> Training finished with (acc, loss): {0.98483628}, {0.04725626}.
+(2023-08-30 22:27:51,479) Graph.get_activations> Activating 1 subgraphs with 3 edges.
+(2023-08-30 22:27:51,479) Graph.get_activations> Activations: 
+| subgraph-0 (\w 0.42415504 probability): [127.0.0.5->127.0.0.8, 127.0.0.1->127.0.0.2, 127.0.0.7->127.0.0.4]
+(2023-08-30 22:27:51,479) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:27:51,479) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:27:51,479) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:27:51,845) Device.roll_call> Waiting for: 
+(2023-08-30 22:27:51,845) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:27:51,981) Model.test> Testing finished with (acc, loss): {0.19960000}, {7.46280003}.
+(2023-08-30 22:27:51,983) Device.start_the_music> Training round {3} of {20}
+(2023-08-30 22:27:51,983) Model.train> Training for 50 epochs.
+(2023-08-30 22:28:23,909) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:28:24,011) Model.test> Training finished with (acc, loss): {0.98644942}, {0.04021513}.
+(2023-08-30 22:28:24,013) Graph.get_activations> Activating 3 subgraphs with 6 edges.
+(2023-08-30 22:28:24,014) Graph.get_activations> Activations: 
+| subgraph-1 (\w 0.22936877 probability): [127.0.0.2->127.0.0.7, 127.0.0.3->127.0.0.4]
+| subgraph-2 (\w 0.11705643 probability): [127.0.0.7->127.0.0.6, 127.0.0.4->127.0.0.10]
+| subgraph-3 (\w 0.22941976 probability): [127.0.0.7->127.0.0.9, 127.0.0.4->127.0.0.5]
+(2023-08-30 22:28:24,014) Device.start_the_music> Sharing weights with {1}: [127.0.0.4]
+(2023-08-30 22:28:24,014) Device.start_the_music> Number of shares: 1
+(2023-08-30 22:28:24,014) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:28:24,379) Comm.send> Sending <Model Update> packet from 127.0.0.10:0 to 127.0.0.4:4000 [Sent].
+(2023-08-30 22:28:24,379) Device.roll_call> Waiting for: 127.0.0.4
+(2023-08-30 22:29:35,918) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-30 22:29:38,453) Device.roll_call> 1 of 1 devices replied.
+(2023-08-30 22:29:38,453) Model.merge> Merging weights from 1 devices
+(2023-08-30 22:29:38,574) Model.test> Testing finished with (acc, loss): {0.28659999}, {3.77923179}.
+(2023-08-30 22:29:38,576) Device.start_the_music> Training round {4} of {20}
+(2023-08-30 22:29:38,577) Model.train> Training for 50 epochs.
+(2023-08-30 22:30:27,329) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:30:27,437) Model.test> Training finished with (acc, loss): {0.98628813}, {0.05491608}.
+(2023-08-30 22:30:27,439) Graph.get_activations> Activating 0 subgraphs with 0 edges.
+(2023-08-30 22:30:27,439) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:30:27,439) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:30:27,439) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:30:27,854) Device.roll_call> Waiting for: 
+(2023-08-30 22:30:27,854) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:30:27,972) Model.test> Testing finished with (acc, loss): {0.29470000}, {7.43029118}.
+(2023-08-30 22:30:27,974) Device.start_the_music> Training round {5} of {20}
+(2023-08-30 22:30:27,974) Model.train> Training for 50 epochs.
+(2023-08-30 22:31:10,165) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:31:10,257) Model.test> Training finished with (acc, loss): {0.98725599}, {0.04962721}.
+(2023-08-30 22:31:10,260) Graph.get_activations> Activating 2 subgraphs with 4 edges.
+(2023-08-30 22:31:10,260) Graph.get_activations> Activations: 
+| subgraph-1 (\w 0.22936877 probability): [127.0.0.2->127.0.0.7, 127.0.0.3->127.0.0.4]
+| subgraph-3 (\w 0.22941976 probability): [127.0.0.7->127.0.0.9, 127.0.0.4->127.0.0.5]
+(2023-08-30 22:31:10,260) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:31:10,260) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:31:10,260) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:31:10,678) Device.roll_call> Waiting for: 
+(2023-08-30 22:31:10,679) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:31:10,794) Model.test> Testing finished with (acc, loss): {0.27950001}, {8.36273956}.
+(2023-08-30 22:31:10,797) Device.start_the_music> Training round {6} of {20}
+(2023-08-30 22:31:10,797) Model.train> Training for 50 epochs.
+(2023-08-30 22:31:52,958) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:31:53,062) Model.test> Training finished with (acc, loss): {0.98790127}, {0.04101602}.
+(2023-08-30 22:31:53,063) Graph.get_activations> Activating 3 subgraphs with 7 edges.
+(2023-08-30 22:31:53,063) Graph.get_activations> Activations: 
+| subgraph-0 (\w 0.42415504 probability): [127.0.0.5->127.0.0.8, 127.0.0.1->127.0.0.2, 127.0.0.7->127.0.0.4]
+| subgraph-1 (\w 0.22936877 probability): [127.0.0.2->127.0.0.7, 127.0.0.3->127.0.0.4]
+| subgraph-2 (\w 0.11705643 probability): [127.0.0.7->127.0.0.6, 127.0.0.4->127.0.0.10]
+(2023-08-30 22:31:53,063) Device.start_the_music> Sharing weights with {1}: [127.0.0.4]
+(2023-08-30 22:31:53,063) Device.start_the_music> Number of shares: 1
+(2023-08-30 22:31:53,063) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:31:53,427) Comm.send> Sending <Model Update> packet from 127.0.0.10:0 to 127.0.0.4:4000 [Sent].
+(2023-08-30 22:31:53,428) Device.roll_call> Waiting for: 127.0.0.4
+(2023-08-30 22:33:16,722) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-30 22:33:23,517) Device.roll_call> 1 of 1 devices replied.
+(2023-08-30 22:33:23,517) Model.merge> Merging weights from 1 devices
+(2023-08-30 22:33:23,767) Model.test> Testing finished with (acc, loss): {0.38240001}, {5.87673187}.
+(2023-08-30 22:33:23,769) Device.start_the_music> Training round {7} of {20}
+(2023-08-30 22:33:23,769) Model.train> Training for 50 epochs.
+(2023-08-30 22:34:09,141) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:34:09,241) Model.test> Training finished with (acc, loss): {0.98693335}, {0.04620972}.
+(2023-08-30 22:34:09,243) Graph.get_activations> Activating 0 subgraphs with 0 edges.
+(2023-08-30 22:34:09,243) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:34:09,243) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:34:09,243) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:34:09,608) Device.roll_call> Waiting for: 
+(2023-08-30 22:34:09,608) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:34:09,719) Model.test> Testing finished with (acc, loss): {0.30739999}, {8.38374138}.
+(2023-08-30 22:34:09,721) Device.start_the_music> Training round {8} of {20}
+(2023-08-30 22:34:09,722) Model.train> Training for 50 epochs.
+(2023-08-30 22:34:54,065) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:34:54,156) Model.test> Training finished with (acc, loss): {0.98757863}, {0.04143132}.
+(2023-08-30 22:34:54,159) Graph.get_activations> Activating 0 subgraphs with 0 edges.
+(2023-08-30 22:34:54,159) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:34:54,159) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:34:54,159) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:34:54,522) Device.roll_call> Waiting for: 
+(2023-08-30 22:34:54,522) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:34:54,641) Model.test> Testing finished with (acc, loss): {0.29409999}, {9.14103889}.
+(2023-08-30 22:34:54,644) Device.start_the_music> Training round {9} of {20}
+(2023-08-30 22:34:54,644) Model.train> Training for 50 epochs.
+(2023-08-30 22:35:36,393) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:35:36,481) Model.test> Training finished with (acc, loss): {0.98790127}, {0.04115397}.
+(2023-08-30 22:35:36,483) Graph.get_activations> Activating 1 subgraphs with 3 edges.
+(2023-08-30 22:35:36,483) Graph.get_activations> Activations: 
+| subgraph-0 (\w 0.42415504 probability): [127.0.0.5->127.0.0.8, 127.0.0.1->127.0.0.2, 127.0.0.7->127.0.0.4]
+(2023-08-30 22:35:36,483) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:35:36,483) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:35:36,483) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:35:36,831) Device.roll_call> Waiting for: 
+(2023-08-30 22:35:36,831) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:35:36,941) Model.test> Testing finished with (acc, loss): {0.28799999}, {9.47406387}.
+(2023-08-30 22:35:36,943) Device.start_the_music> Training round {10} of {20}
+(2023-08-30 22:35:36,943) Model.train> Training for 50 epochs.
+(2023-08-30 22:36:18,823) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:36:18,914) Model.test> Training finished with (acc, loss): {0.98822391}, {0.03542776}.
+(2023-08-30 22:36:18,916) Graph.get_activations> Activating 2 subgraphs with 4 edges.
+(2023-08-30 22:36:18,916) Graph.get_activations> Activations: 
+| subgraph-2 (\w 0.11705643 probability): [127.0.0.7->127.0.0.6, 127.0.0.4->127.0.0.10]
+| subgraph-3 (\w 0.22941976 probability): [127.0.0.7->127.0.0.9, 127.0.0.4->127.0.0.5]
+(2023-08-30 22:36:18,916) Device.start_the_music> Sharing weights with {1}: [127.0.0.4]
+(2023-08-30 22:36:18,917) Device.start_the_music> Number of shares: 1
+(2023-08-30 22:36:18,917) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:36:19,279) Comm.send> Sending <Model Update> packet from 127.0.0.10:0 to 127.0.0.4:4000 [Sent].
+(2023-08-30 22:36:19,279) Device.roll_call> Waiting for: 127.0.0.4
+(2023-08-30 22:38:22,182) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-30 22:38:29,416) Device.roll_call> 1 of 1 devices replied.
+(2023-08-30 22:38:29,416) Model.merge> Merging weights from 1 devices
+(2023-08-30 22:38:29,671) Model.test> Testing finished with (acc, loss): {0.39410001}, {5.80608702}.
+(2023-08-30 22:38:29,674) Device.start_the_music> Training round {11} of {20}
+(2023-08-30 22:38:29,674) Model.train> Training for 50 epochs.
+(2023-08-30 22:39:12,334) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:39:12,428) Model.test> Training finished with (acc, loss): {0.98741734}, {0.04830716}.
+(2023-08-30 22:39:12,431) Graph.get_activations> Activating 1 subgraphs with 2 edges.
+(2023-08-30 22:39:12,431) Graph.get_activations> Activations: 
+| subgraph-1 (\w 0.22936877 probability): [127.0.0.2->127.0.0.7, 127.0.0.3->127.0.0.4]
+(2023-08-30 22:39:12,431) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:39:12,431) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:39:12,431) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:39:12,792) Device.roll_call> Waiting for: 
+(2023-08-30 22:39:12,792) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:39:12,908) Model.test> Testing finished with (acc, loss): {0.31700000}, {8.09844398}.
+(2023-08-30 22:39:12,910) Device.start_the_music> Training round {12} of {20}
+(2023-08-30 22:39:12,910) Model.train> Training for 50 epochs.
+(2023-08-30 22:39:55,896) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:39:55,988) Model.test> Training finished with (acc, loss): {0.98790127}, {0.03898362}.
+(2023-08-30 22:39:55,990) Graph.get_activations> Activating 2 subgraphs with 5 edges.
+(2023-08-30 22:39:55,991) Graph.get_activations> Activations: 
+| subgraph-0 (\w 0.42415504 probability): [127.0.0.5->127.0.0.8, 127.0.0.1->127.0.0.2, 127.0.0.7->127.0.0.4]
+| subgraph-1 (\w 0.22936877 probability): [127.0.0.2->127.0.0.7, 127.0.0.3->127.0.0.4]
+(2023-08-30 22:39:55,991) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:39:55,991) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:39:55,991) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:39:56,355) Device.roll_call> Waiting for: 
+(2023-08-30 22:39:56,355) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:39:56,471) Model.test> Testing finished with (acc, loss): {0.30440000}, {8.74589348}.
+(2023-08-30 22:39:56,473) Device.start_the_music> Training round {13} of {20}
+(2023-08-30 22:39:56,473) Model.train> Training for 50 epochs.
+(2023-08-30 22:40:40,801) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:40:40,901) Model.test> Training finished with (acc, loss): {0.98806262}, {0.03554934}.
+(2023-08-30 22:40:40,903) Graph.get_activations> Activating 1 subgraphs with 3 edges.
+(2023-08-30 22:40:40,903) Graph.get_activations> Activations: 
+| subgraph-0 (\w 0.42415504 probability): [127.0.0.5->127.0.0.8, 127.0.0.1->127.0.0.2, 127.0.0.7->127.0.0.4]
+(2023-08-30 22:40:40,903) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:40:40,903) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:40:40,903) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:40:41,267) Device.roll_call> Waiting for: 
+(2023-08-30 22:40:41,268) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:40:41,397) Model.test> Testing finished with (acc, loss): {0.29830000}, {8.99326134}.
+(2023-08-30 22:40:41,399) Device.start_the_music> Training round {14} of {20}
+(2023-08-30 22:40:41,399) Model.train> Training for 50 epochs.
+(2023-08-30 22:41:25,010) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:41:25,112) Model.test> Training finished with (acc, loss): {0.98854655}, {0.03472436}.
+(2023-08-30 22:41:25,113) Graph.get_activations> Activating 1 subgraphs with 3 edges.
+(2023-08-30 22:41:25,113) Graph.get_activations> Activations: 
+| subgraph-0 (\w 0.42415504 probability): [127.0.0.5->127.0.0.8, 127.0.0.1->127.0.0.2, 127.0.0.7->127.0.0.4]
+(2023-08-30 22:41:25,113) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:41:25,113) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:41:25,113) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:41:25,481) Device.roll_call> Waiting for: 
+(2023-08-30 22:41:25,481) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:41:25,609) Model.test> Testing finished with (acc, loss): {0.29580000}, {9.08368301}.
+(2023-08-30 22:41:25,611) Device.start_the_music> Training round {15} of {20}
+(2023-08-30 22:41:25,611) Model.train> Training for 50 epochs.
+(2023-08-30 22:42:08,862) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:42:08,970) Model.test> Training finished with (acc, loss): {0.98870784}, {0.03392336}.
+(2023-08-30 22:42:08,972) Graph.get_activations> Activating 1 subgraphs with 3 edges.
+(2023-08-30 22:42:08,973) Graph.get_activations> Activations: 
+| subgraph-0 (\w 0.42415504 probability): [127.0.0.5->127.0.0.8, 127.0.0.1->127.0.0.2, 127.0.0.7->127.0.0.4]
+(2023-08-30 22:42:08,973) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:42:08,973) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:42:08,973) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:42:09,339) Device.roll_call> Waiting for: 
+(2023-08-30 22:42:09,339) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:42:09,468) Model.test> Testing finished with (acc, loss): {0.29409999}, {9.10642433}.
+(2023-08-30 22:42:09,470) Device.start_the_music> Training round {16} of {20}
+(2023-08-30 22:42:09,470) Model.train> Training for 50 epochs.
+(2023-08-30 22:42:51,539) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:42:51,645) Model.test> Training finished with (acc, loss): {0.98919183}, {0.03371538}.
+(2023-08-30 22:42:51,647) Graph.get_activations> Activating 1 subgraphs with 2 edges.
+(2023-08-30 22:42:51,647) Graph.get_activations> Activations: 
+| subgraph-3 (\w 0.22941976 probability): [127.0.0.7->127.0.0.9, 127.0.0.4->127.0.0.5]
+(2023-08-30 22:42:51,647) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:42:51,647) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:42:51,647) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:42:52,012) Device.roll_call> Waiting for: 
+(2023-08-30 22:42:52,012) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:42:52,137) Model.test> Testing finished with (acc, loss): {0.29330000}, {9.09297180}.
+(2023-08-30 22:42:52,139) Device.start_the_music> Training round {17} of {20}
+(2023-08-30 22:42:52,139) Model.train> Training for 50 epochs.
+(2023-08-30 22:43:34,382) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:43:34,477) Model.test> Training finished with (acc, loss): {0.98967576}, {0.03248270}.
+(2023-08-30 22:43:34,479) Graph.get_activations> Activating 2 subgraphs with 5 edges.
+(2023-08-30 22:43:34,480) Graph.get_activations> Activations: 
+| subgraph-0 (\w 0.42415504 probability): [127.0.0.5->127.0.0.8, 127.0.0.1->127.0.0.2, 127.0.0.7->127.0.0.4]
+| subgraph-3 (\w 0.22941976 probability): [127.0.0.7->127.0.0.9, 127.0.0.4->127.0.0.5]
+(2023-08-30 22:43:34,480) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:43:34,480) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:43:34,480) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:43:34,837) Device.roll_call> Waiting for: 
+(2023-08-30 22:43:34,838) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:43:34,951) Model.test> Testing finished with (acc, loss): {0.29319999}, {9.06198120}.
+(2023-08-30 22:43:34,953) Device.start_the_music> Training round {18} of {20}
+(2023-08-30 22:43:34,953) Model.train> Training for 50 epochs.
+(2023-08-30 22:44:16,181) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:44:16,275) Model.test> Training finished with (acc, loss): {0.98983705}, {0.03393781}.
+(2023-08-30 22:44:16,277) Graph.get_activations> Activating 2 subgraphs with 5 edges.
+(2023-08-30 22:44:16,277) Graph.get_activations> Activations: 
+| subgraph-0 (\w 0.42415504 probability): [127.0.0.5->127.0.0.8, 127.0.0.1->127.0.0.2, 127.0.0.7->127.0.0.4]
+| subgraph-1 (\w 0.22936877 probability): [127.0.0.2->127.0.0.7, 127.0.0.3->127.0.0.4]
+(2023-08-30 22:44:16,277) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:44:16,277) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:44:16,278) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:44:16,636) Device.roll_call> Waiting for: 
+(2023-08-30 22:44:16,636) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:44:16,754) Model.test> Testing finished with (acc, loss): {0.29350001}, {9.02411652}.
+(2023-08-30 22:44:16,756) Device.start_the_music> Training round {19} of {20}
+(2023-08-30 22:44:16,756) Model.train> Training for 50 epochs.
+(2023-08-30 22:44:58,010) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:44:58,103) Model.test> Training finished with (acc, loss): {0.98983705}, {0.03395426}.
+(2023-08-30 22:44:58,105) Graph.get_activations> Activating 2 subgraphs with 4 edges.
+(2023-08-30 22:44:58,105) Graph.get_activations> Activations: 
+| subgraph-2 (\w 0.11705643 probability): [127.0.0.7->127.0.0.6, 127.0.0.4->127.0.0.10]
+| subgraph-3 (\w 0.22941976 probability): [127.0.0.7->127.0.0.9, 127.0.0.4->127.0.0.5]
+(2023-08-30 22:44:58,105) Device.start_the_music> Sharing weights with {1}: [127.0.0.4]
+(2023-08-30 22:44:58,105) Device.start_the_music> Number of shares: 1
+(2023-08-30 22:44:58,105) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:44:58,455) Comm.send> Sending <Model Update> packet from 127.0.0.10:0 to 127.0.0.4:4000 [Sent].
+(2023-08-30 22:44:58,455) Device.roll_call> Waiting for: 127.0.0.4
+(2023-08-30 22:50:35,663) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-30 22:50:40,813) Device.roll_call> 1 of 1 devices replied.
+(2023-08-30 22:50:40,813) Model.merge> Merging weights from 1 devices
+(2023-08-30 22:50:41,093) Model.test> Testing finished with (acc, loss): {0.41299999}, {6.03351402}.
+(2023-08-30 22:50:41,096) Device.start_the_music> Training round {20} of {20}
+(2023-08-30 22:50:41,096) Model.train> Training for 50 epochs.
+(2023-08-30 22:51:25,204) Model.train> Finised at/after -1.00 seconds 50 epochs 49 batches.
+(2023-08-30 22:51:25,309) Model.test> Training finished with (acc, loss): {0.98644942}, {0.04851810}.
+(2023-08-30 22:51:25,313) Graph.get_activations> Activating 1 subgraphs with 3 edges.
+(2023-08-30 22:51:25,313) Graph.get_activations> Activations: 
+| subgraph-0 (\w 0.42415504 probability): [127.0.0.5->127.0.0.8, 127.0.0.1->127.0.0.2, 127.0.0.7->127.0.0.4]
+(2023-08-30 22:51:25,313) Device.start_the_music> Sharing weights with {0}: []
+(2023-08-30 22:51:25,313) Device.start_the_music> Number of shares: 0
+(2023-08-30 22:51:25,313) Model.compute_fim> Computing Fisher information matrix
+(2023-08-30 22:51:25,703) Device.roll_call> Waiting for: 
+(2023-08-30 22:51:25,704) Device.roll_call> 0 of 0 devices replied.
+(2023-08-30 22:51:25,809) Model.test> Testing finished with (acc, loss): {0.34090000}, {8.76672935}.
+(2023-08-30 22:51:25,812) Device.start_the_music> Training Finished.
+(2023-08-30 22:51:25,812) Device.stop> Device will stop listening and responding.
+(2023-08-30 22:51:27,318) Comm.udp_listener> Stopped listening for UDP packets at port 4001.
+(2023-08-30 22:51:27,382) Comm.responder> Stopped responding.
+(2023-08-30 22:51:30,715) Comm.tcp_listener> Stopped listening for TCP packets at port 4000.
+(2023-08-30 22:51:35,824) Comm.send> Sending <Adios!> packet from 127.0.0.10:0 to 127.0.0.250:4000 [Sent].

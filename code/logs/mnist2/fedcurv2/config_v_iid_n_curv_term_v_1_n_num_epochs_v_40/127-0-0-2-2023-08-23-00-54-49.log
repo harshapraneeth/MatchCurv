@@ -1,0 +1,979 @@
+(2023-08-23 00:54:49,884) Comm.responder> Started responding
+(2023-08-23 00:54:49,905) Device.start> Device started listening and responding.
+(2023-08-23 00:54:49,905) Device.start_the_music> ybin'....
+(2023-08-23 00:54:49,905) Comm.tcp_listener> Started listening for TCP packets at port 4000.
+(2023-08-23 00:54:49,905) Comm.udp_listener> Started listening for UDP packets at port 4001.
+(2023-08-23 00:54:49,905) Device.start_the_music> is_simulation: True
+(2023-08-23 00:54:49,906) Device.start_the_music> ip: 
+(2023-08-23 00:54:49,906) Device.start_the_music> tcp_port: 4000
+(2023-08-23 00:54:49,906) Device.start_the_music> udp_port: 4001
+(2023-08-23 00:54:49,906) Device.start_the_music> certificate: ../../_db_cert/matchprox-firebase-adminsdk-gms4p-0bf46bc35b.json
+(2023-08-23 00:54:49,906) Device.start_the_music> database_url: https://matchprox-default-rtdb.europe-west1.firebasedatabase.app/
+(2023-08-23 00:54:49,906) Device.start_the_music> decomposition: matcha
+(2023-08-23 00:54:49,906) Device.start_the_music> activations: random
+(2023-08-23 00:54:49,906) Device.start_the_music> comm_budget: 1
+(2023-08-23 00:54:49,907) Device.start_the_music> mode: sync
+(2023-08-23 00:54:49,907) Device.start_the_music> stragglers: 0
+(2023-08-23 00:54:49,907) Device.start_the_music> lag: 0.0
+(2023-08-23 00:54:49,907) Device.start_the_music> model: MLP
+(2023-08-23 00:54:49,907) Device.start_the_music> model_args: []
+(2023-08-23 00:54:49,907) Device.start_the_music> num_rounds: 1000
+(2023-08-23 00:54:49,907) Device.start_the_music> num_epochs: 40
+(2023-08-23 00:54:49,907) Device.start_the_music> num_seconds: -1
+(2023-08-23 00:54:49,907) Comm.recv_udp_packet> Receiving <Whammo!> packet from 127.0.0.4:0 [Received].
+(2023-08-23 00:54:49,907) Device.start_the_music> batch_size: 128
+(2023-08-23 00:54:49,908) Device.start_the_music> input_shape: [28, 28, 1]
+(2023-08-23 00:54:49,908) Device.start_the_music> num_outputs: 10
+(2023-08-23 00:54:49,908) Device.start_the_music> learning_rate: 0.01
+(2023-08-23 00:54:49,908) Device.start_the_music> l2_term: 0
+(2023-08-23 00:54:49,908) Device.start_the_music> prox_term: 0
+(2023-08-23 00:54:49,908) Device.start_the_music> curv_term: 1
+(2023-08-23 00:54:49,908) Device.start_the_music> train_files: ../../datasets/mnist/train/
+(2023-08-23 00:54:49,908) Device.start_the_music> test_files: ../../datasets/mnist/test/
+(2023-08-23 00:54:49,908) Device.start_the_music> label_distribution: 10
+(2023-08-23 00:54:49,908) Device.start_the_music> sample_distribution: 0.05
+(2023-08-23 00:54:49,908) Device.start_the_music> random_preset: ../../_random_presets/random_preset_1.b
+(2023-08-23 00:54:49,908) Device.start_the_music> graph_preset: ../../_graph_presets/connected_graph_20_60.b
+(2023-08-23 00:54:49,908) Device.start_the_music> model_preset: ../../_model_presets/mclr_preset_1.b
+(2023-08-23 00:54:49,908) Device.start_the_music> logs_location: ../../logs/mnist2/fedcurv2/config_v_iid_n_curv_term_v_1_n_num_epochs_v_40/
+(2023-08-23 00:54:49,909) Device.start_the_music> results_location: ../../results/mnist2/fedcurv2/config_v_iid_n_curv_term_v_1_n_num_epochs_v_40/
+(2023-08-23 00:54:49,909) Device.start_the_music> stdout: False
+(2023-08-23 00:54:49,909) Device.start_the_music> clear_logs: True
+(2023-08-23 00:54:49,909) Device.start_the_music> ignore_logger: False
+(2023-08-23 00:54:49,909) Device.start_the_music> ignore_database: True
+(2023-08-23 00:54:49,909) Device.start_the_music> sync_delay: 10
+(2023-08-23 00:54:49,909) Comm.broadcast> Broadcasting <Whammo!> packet from 127.0.0.2:0 [Sent].
+(2023-08-23 00:54:49,909) Comm.broadcast> Broadcasting <Whammo!> packet from 127.0.0.2:0 [Sent].
+(2023-08-23 00:54:49,910) Comm.broadcast> Broadcasting <Whammo!> packet from 127.0.0.2:0 [Sent].
+(2023-08-23 00:54:49,910) Comm.broadcast> Broadcasting <Whammo!> packet from 127.0.0.2:0 [Sent].
+(2023-08-23 00:54:49,910) Comm.broadcast> Broadcasting <Whammo!> packet from 127.0.0.2:0 [Sent].
+(2023-08-23 00:54:49,910) Comm.recv_udp_packet> Receiving <Whammo!> packet from 127.0.0.1:0 [Received].
+(2023-08-23 00:54:49,911) Comm.broadcast> Broadcasting <Whammo!> packet from 127.0.0.2:0 [Sent].
+(2023-08-23 00:54:49,911) Graph.add_edge> Added edge from 127.0.0.1 to 127.0.0.2
+(2023-08-23 00:54:49,911) Graph.add_edge> Added edge from 127.0.0.1 to 127.0.0.20
+(2023-08-23 00:54:49,912) Graph.add_edge> Added edge from 127.0.0.1 to 127.0.0.3
+(2023-08-23 00:54:49,912) Graph.add_edge> Added edge from 127.0.0.1 to 127.0.0.19
+(2023-08-23 00:54:49,912) Graph.add_edge> Added edge from 127.0.0.1 to 127.0.0.18
+(2023-08-23 00:54:49,912) Graph.add_edge> Added edge from 127.0.0.1 to 127.0.0.14
+(2023-08-23 00:54:49,912) Graph.add_edge> Added edge from 127.0.0.1 to 127.0.0.11
+(2023-08-23 00:54:49,912) Graph.add_edge> Added edge from 127.0.0.2 to 127.0.0.3
+(2023-08-23 00:54:49,912) Graph.add_edge> Added edge from 127.0.0.2 to 127.0.0.4
+(2023-08-23 00:54:49,912) Graph.add_edge> Added edge from 127.0.0.2 to 127.0.0.5
+(2023-08-23 00:54:49,912) Graph.add_edge> Added edge from 127.0.0.2 to 127.0.0.19
+(2023-08-23 00:54:49,912) Graph.add_edge> Added edge from 127.0.0.2 to 127.0.0.9
+(2023-08-23 00:54:49,912) Graph.add_edge> Added edge from 127.0.0.3 to 127.0.0.4
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.3 to 127.0.0.6
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.3 to 127.0.0.10
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.3 to 127.0.0.14
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.4 to 127.0.0.5
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.4 to 127.0.0.6
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.4 to 127.0.0.7
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.4 to 127.0.0.14
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.5 to 127.0.0.6
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.5 to 127.0.0.7
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.5 to 127.0.0.8
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.5 to 127.0.0.20
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.6 to 127.0.0.7
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.6 to 127.0.0.8
+(2023-08-23 00:54:49,913) Graph.add_edge> Added edge from 127.0.0.6 to 127.0.0.15
+(2023-08-23 00:54:49,914) Graph.add_edge> Added edge from 127.0.0.6 to 127.0.0.18
+(2023-08-23 00:54:49,914) Graph.add_edge> Added edge from 127.0.0.7 to 127.0.0.8
+(2023-08-23 00:54:49,914) Graph.add_edge> Added edge from 127.0.0.7 to 127.0.0.10
+(2023-08-23 00:54:49,914) Graph.add_edge> Added edge from 127.0.0.7 to 127.0.0.14
+(2023-08-23 00:54:49,914) Graph.add_edge> Added edge from 127.0.0.8 to 127.0.0.9
+(2023-08-23 00:54:49,914) Graph.add_edge> Added edge from 127.0.0.8 to 127.0.0.19
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.8 to 127.0.0.18
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.9 to 127.0.0.17
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.9 to 127.0.0.20
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.9 to 127.0.0.15
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.10 to 127.0.0.11
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.10 to 127.0.0.12
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.10 to 127.0.0.13
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.11 to 127.0.0.12
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.11 to 127.0.0.13
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.11 to 127.0.0.20
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.12 to 127.0.0.13
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.12 to 127.0.0.14
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.12 to 127.0.0.15
+(2023-08-23 00:54:49,915) Graph.add_edge> Added edge from 127.0.0.13 to 127.0.0.14
+(2023-08-23 00:54:49,916) Graph.add_edge> Added edge from 127.0.0.13 to 127.0.0.15
+(2023-08-23 00:54:49,916) Graph.add_edge> Added edge from 127.0.0.13 to 127.0.0.16
+(2023-08-23 00:54:49,916) Graph.add_edge> Added edge from 127.0.0.14 to 127.0.0.16
+(2023-08-23 00:54:49,916) Graph.add_edge> Added edge from 127.0.0.15 to 127.0.0.17
+(2023-08-23 00:54:49,916) Graph.add_edge> Added edge from 127.0.0.16 to 127.0.0.17
+(2023-08-23 00:54:49,916) Graph.add_edge> Added edge from 127.0.0.16 to 127.0.0.18
+(2023-08-23 00:54:49,916) Graph.add_edge> Added edge from 127.0.0.16 to 127.0.0.19
+(2023-08-23 00:54:49,916) Graph.add_edge> Added edge from 127.0.0.17 to 127.0.0.18
+(2023-08-23 00:54:49,916) Graph.add_edge> Added edge from 127.0.0.17 to 127.0.0.19
+(2023-08-23 00:54:49,916) Graph.add_edge> Added edge from 127.0.0.17 to 127.0.0.20
+(2023-08-23 00:54:49,916) Graph.add_edge> Added edge from 127.0.0.18 to 127.0.0.19
+(2023-08-23 00:54:49,916) Graph.add_edge> Added edge from 127.0.0.18 to 127.0.0.20
+(2023-08-23 00:54:49,916) Graph.add_edge> Added edge from 127.0.0.19 to 127.0.0.20
+(2023-08-23 00:54:49,916) Graph.create_random> Graph created with 20 nodes and 60 edges.
+(2023-08-23 00:54:49,917) Device.start_the_music> Neighbors: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 00:54:49,917) Graph.decompose> Decomposing graph with method: matcha.
+(2023-08-23 00:54:49,919) Graph.decompose> Created 8 subgraphs (total_edges: 60).
+(2023-08-23 00:54:49,919) Graph.decompose> Subgraphs: 
+| subgraph-0 (\w 10 edges): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 9 edges): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 9 edges): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 9 edges): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 8 edges): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 7 edges): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 7 edges): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1 edges): [127.0.0.19->127.0.0.18]
+(2023-08-23 00:54:49,919) Graph.compute_probabilities> Computing probabilities with method: random and budget: 1.0000.
+(2023-08-23 00:54:49,919) Graph.compute_probabilities> Probabilities: 
+| subgraph-0 (\w 10 edges): 1.00000000
+| subgraph-1 (\w 9 edges): 1.00000000
+| subgraph-2 (\w 9 edges): 1.00000000
+| subgraph-3 (\w 9 edges): 1.00000000
+| subgraph-4 (\w 8 edges): 1.00000000
+| subgraph-5 (\w 7 edges): 1.00000000
+| subgraph-6 (\w 7 edges): 1.00000000
+| subgraph-7 (\w 1 edges): 1.00000000
+(2023-08-23 00:54:49,919) Model.preheat> Preheating files: 
+| [../../datasets/mnist/train/label_9.b, ../../datasets/mnist/train/label_0.b, ../../datasets/mnist/train/label_5.b, ../../datasets/mnist/train/label_2.b, ../../datasets/mnist/train/label_4.b, ../../datasets/mnist/train/label_6.b, ../../datasets/mnist/train/label_8.b, ../../datasets/mnist/train/label_1.b, ../../datasets/mnist/train/label_7.b, ../../datasets/mnist/train/label_3.b][0.05:0.10] 
+| [../../datasets/mnist/test/label_9.b, ../../datasets/mnist/test/label_0.b, ../../datasets/mnist/test/label_5.b, ../../datasets/mnist/test/label_2.b, ../../datasets/mnist/test/label_4.b, ../../datasets/mnist/test/label_6.b, ../../datasets/mnist/test/label_8.b, ../../datasets/mnist/test/label_1.b, ../../datasets/mnist/test/label_7.b, ../../datasets/mnist/test/label_3.b]
+(2023-08-23 00:54:49,923) Comm.recv_udp_packet> Receiving <Whammo!> packet from 127.0.0.9:0 [Received].
+(2023-08-23 00:54:49,938) Comm.recv_udp_packet> Receiving <Whammo!> packet from 127.0.0.5:0 [Received].
+(2023-08-23 00:54:49,951) Comm.recv_udp_packet> Receiving <Whammo!> packet from 127.0.0.3:0 [Received].
+(2023-08-23 00:54:54,890) Comm.send> Sending <ACK: Whammo!> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 00:54:54,891) Comm.send> Sending <ACK: Whammo!> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 00:54:54,891) Comm.send> Sending <ACK: Whammo!> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 00:54:54,892) Comm.send> Sending <ACK: Whammo!> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 00:54:54,892) Comm.send> Sending <ACK: Whammo!> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 00:54:54,893) Comm.recv_tcp_packet> Receiving <ACK: Whammo!> packet from 127.0.0.19:0 [Received].
+(2023-08-23 00:54:54,907) Comm.recv_tcp_packet> Receiving <ACK: Whammo!> packet from 127.0.0.1:0 [Received].
+(2023-08-23 00:54:54,907) Comm.recv_tcp_packet> Receiving <ACK: Whammo!> packet from 127.0.0.4:0 [Received].
+(2023-08-23 00:55:05,751) Device.start_the_music> Training round {1} of {25}
+(2023-08-23 00:55:05,752) Model.train> Training for 40 epochs.
+(2023-08-23 00:55:22,570) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 00:55:22,705) Model.test> Training finished with (acc, loss): {0.88333333}, {0.56592959}.
+(2023-08-23 00:55:22,706) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 00:55:22,706) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 00:55:22,706) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 00:55:22,706) Device.start_the_music> Number of shares: 6
+(2023-08-23 00:55:22,706) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 00:55:23,156) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 00:55:23,157) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 00:55:23,158) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 00:55:23,159) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 00:55:23,160) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 00:55:23,160) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 00:55:23,161) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9
+(2023-08-23 00:55:23,398) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 00:55:23,480) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 00:55:23,682) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 00:55:23,763) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 00:55:23,764) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 00:55:24,100) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 00:55:27,165) Device.roll_call> 6 of 6 devices replied.
+(2023-08-23 00:55:27,166) Model.merge> Merging weights from 6 devices
+(2023-08-23 00:55:27,438) Model.test> Testing finished with (acc, loss): {0.86199999}, {0.60856342}.
+(2023-08-23 00:55:27,445) Device.start_the_music> Training round {2} of {25}
+(2023-08-23 00:55:27,445) Model.train> Training for 40 epochs.
+(2023-08-23 00:56:09,204) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 00:56:11,034) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 00:56:11,086) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 00:56:11,111) Model.test> Training finished with (acc, loss): {0.87099999}, {0.59067011}.
+(2023-08-23 00:56:11,112) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 00:56:11,112) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 00:56:11,112) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 00:56:11,112) Device.start_the_music> Number of shares: 6
+(2023-08-23 00:56:11,112) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 00:56:11,481) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 00:56:11,496) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 00:56:11,497) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 00:56:11,498) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 00:56:11,499) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 00:56:11,500) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 00:56:11,501) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 00:56:11,501) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 00:56:12,678) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 00:56:14,427) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 00:56:16,572) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 00:56:23,512) Device.roll_call> 5 of 5 devices replied.
+(2023-08-23 00:56:23,513) Model.merge> Merging weights from 6 devices
+(2023-08-23 00:56:23,753) Model.test> Testing finished with (acc, loss): {0.86489999}, {0.59339446}.
+(2023-08-23 00:56:23,754) Device.start_the_music> Training round {3} of {25}
+(2023-08-23 00:56:23,754) Model.train> Training for 40 epochs.
+(2023-08-23 00:56:57,349) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 00:57:00,870) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 00:57:01,531) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 00:57:04,112) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 00:57:04,726) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 00:57:07,529) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 00:57:07,603) Model.test> Training finished with (acc, loss): {0.87533331}, {0.57297558}.
+(2023-08-23 00:57:07,603) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 00:57:07,604) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 00:57:07,604) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 00:57:07,604) Device.start_the_music> Number of shares: 6
+(2023-08-23 00:57:07,604) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 00:57:08,002) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 00:57:08,003) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 00:57:08,004) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 00:57:08,006) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 00:57:08,007) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 00:57:08,008) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 00:57:08,008) Device.roll_call> Waiting for: 127.0.0.19
+(2023-08-23 00:57:10,359) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 00:57:18,025) Device.roll_call> 1 of 1 devices replied.
+(2023-08-23 00:57:18,025) Model.merge> Merging weights from 6 devices
+(2023-08-23 00:57:18,183) Model.test> Testing finished with (acc, loss): {0.86830002}, {0.58280349}.
+(2023-08-23 00:57:18,187) Device.start_the_music> Training round {4} of {25}
+(2023-08-23 00:57:18,187) Model.train> Training for 40 epochs.
+(2023-08-23 00:57:53,252) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 00:57:55,563) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 00:58:01,142) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 00:58:01,257) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 00:58:01,345) Model.test> Training finished with (acc, loss): {0.87766665}, {0.56596470}.
+(2023-08-23 00:58:01,345) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 00:58:01,345) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 00:58:01,346) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 00:58:01,346) Device.start_the_music> Number of shares: 6
+(2023-08-23 00:58:01,346) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 00:58:01,743) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 00:58:01,744) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 00:58:01,746) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 00:58:01,747) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 00:58:01,747) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 00:58:01,748) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 00:58:01,749) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.1
+(2023-08-23 00:58:01,976) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 00:58:04,906) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 00:58:05,276) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 00:58:13,760) Device.roll_call> 4 of 4 devices replied.
+(2023-08-23 00:58:13,760) Model.merge> Merging weights from 6 devices
+(2023-08-23 00:58:13,936) Model.test> Testing finished with (acc, loss): {0.86970001}, {0.57233840}.
+(2023-08-23 00:58:13,936) Device.start_the_music> Training round {5} of {25}
+(2023-08-23 00:58:13,937) Model.train> Training for 40 epochs.
+(2023-08-23 00:58:47,651) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 00:58:51,021) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 00:58:51,103) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 00:58:52,169) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 00:58:52,911) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 00:58:56,160) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 00:58:56,236) Model.test> Training finished with (acc, loss): {0.87800002}, {0.55545998}.
+(2023-08-23 00:58:56,237) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 00:58:56,237) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 00:58:56,237) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 00:58:56,237) Device.start_the_music> Number of shares: 6
+(2023-08-23 00:58:56,237) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 00:58:56,622) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 00:58:56,623) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 00:58:56,625) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 00:58:56,626) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 00:58:56,627) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 00:58:56,629) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 00:58:56,629) Device.roll_call> Waiting for: 127.0.0.1
+(2023-08-23 00:59:00,209) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 00:59:08,640) Device.roll_call> 1 of 1 devices replied.
+(2023-08-23 00:59:08,640) Model.merge> Merging weights from 6 devices
+(2023-08-23 00:59:08,852) Model.test> Testing finished with (acc, loss): {0.87070000}, {0.56362808}.
+(2023-08-23 00:59:08,855) Device.start_the_music> Training round {6} of {25}
+(2023-08-23 00:59:08,855) Model.train> Training for 40 epochs.
+(2023-08-23 00:59:42,109) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 00:59:45,893) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 00:59:47,417) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 00:59:47,838) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 00:59:48,306) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 00:59:50,859) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 00:59:51,468) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 00:59:51,572) Model.test> Training finished with (acc, loss): {0.88000000}, {0.54656446}.
+(2023-08-23 00:59:51,577) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 00:59:51,577) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 00:59:51,578) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 00:59:51,578) Device.start_the_music> Number of shares: 6
+(2023-08-23 00:59:51,578) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 00:59:51,950) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 00:59:51,952) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 00:59:51,953) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 00:59:51,954) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 00:59:51,955) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 00:59:51,957) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 00:59:51,957) Device.roll_call> Waiting for: 127.0.0.19
+(2023-08-23 00:59:57,962) Device.roll_call> 1 of 1 devices replied.
+(2023-08-23 00:59:57,962) Model.merge> Merging weights from 6 devices
+(2023-08-23 00:59:58,155) Model.test> Testing finished with (acc, loss): {0.87220001}, {0.55520165}.
+(2023-08-23 00:59:58,158) Device.start_the_music> Training round {7} of {25}
+(2023-08-23 00:59:58,158) Model.train> Training for 40 epochs.
+(2023-08-23 01:00:40,336) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:00:40,425) Model.test> Training finished with (acc, loss): {0.88166666}, {0.54125535}.
+(2023-08-23 01:00:40,426) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:00:40,426) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:00:40,426) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:00:40,426) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:00:40,426) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:00:40,836) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:00:40,837) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:00:40,839) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:00:40,840) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:00:40,841) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:00:40,843) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:00:40,843) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9
+(2023-08-23 01:00:41,263) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:00:41,410) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:00:42,181) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:00:48,007) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:00:49,358) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:00:50,481) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:00:58,860) Device.roll_call> 6 of 6 devices replied.
+(2023-08-23 01:00:58,860) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:00:59,051) Model.test> Testing finished with (acc, loss): {0.87419999}, {0.54688311}.
+(2023-08-23 01:00:59,055) Device.start_the_music> Training round {8} of {25}
+(2023-08-23 01:00:59,055) Model.train> Training for 40 epochs.
+(2023-08-23 01:01:30,439) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:01:34,187) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:01:36,556) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:01:37,151) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:01:37,382) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:01:41,048) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:01:41,113) Model.test> Training finished with (acc, loss): {0.88200003}, {0.53119183}.
+(2023-08-23 01:01:41,114) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:01:41,114) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:01:41,114) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:01:41,114) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:01:41,114) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:01:41,494) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:01:41,495) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:01:41,497) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:01:41,498) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:01:41,499) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:01:41,501) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:01:41,501) Device.roll_call> Waiting for: 127.0.0.1
+(2023-08-23 01:01:44,707) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:01:47,507) Device.roll_call> 1 of 1 devices replied.
+(2023-08-23 01:01:47,508) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:01:47,701) Model.test> Testing finished with (acc, loss): {0.87599999}, {0.54082102}.
+(2023-08-23 01:01:47,707) Device.start_the_music> Training round {9} of {25}
+(2023-08-23 01:01:47,707) Model.train> Training for 40 epochs.
+(2023-08-23 01:02:29,611) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:02:30,887) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:02:30,953) Model.test> Training finished with (acc, loss): {0.88333333}, {0.52738208}.
+(2023-08-23 01:02:30,954) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:02:30,954) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:02:30,954) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:02:30,954) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:02:30,955) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:02:31,127) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:02:31,356) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:02:31,358) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:02:31,359) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:02:31,360) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:02:31,361) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:02:31,362) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:02:31,362) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 01:02:31,765) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:02:33,388) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:02:36,097) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:02:36,629) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:02:43,375) Device.roll_call> 5 of 5 devices replied.
+(2023-08-23 01:02:43,376) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:02:43,574) Model.test> Testing finished with (acc, loss): {0.87790000}, {0.53392315}.
+(2023-08-23 01:02:43,574) Device.start_the_music> Training round {10} of {25}
+(2023-08-23 01:02:43,574) Model.train> Training for 40 epochs.
+(2023-08-23 01:03:22,480) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:03:22,593) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:03:26,890) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:03:27,203) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:03:27,263) Model.test> Training finished with (acc, loss): {0.88566667}, {0.51849991}.
+(2023-08-23 01:03:27,268) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:03:27,268) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:03:27,268) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:03:27,268) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:03:27,268) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:03:27,659) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:03:27,660) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:03:27,661) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:03:27,663) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:03:27,664) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:03:27,665) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:03:27,666) Device.roll_call> Waiting for: 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 01:03:28,129) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:03:29,524) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:03:32,204) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:03:37,676) Device.roll_call> 4 of 4 devices replied.
+(2023-08-23 01:03:37,677) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:03:37,901) Model.test> Testing finished with (acc, loss): {0.87889999}, {0.52820539}.
+(2023-08-23 01:03:37,904) Device.start_the_music> Training round {11} of {25}
+(2023-08-23 01:03:37,904) Model.train> Training for 40 epochs.
+(2023-08-23 01:04:19,637) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:04:20,535) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:04:20,610) Model.test> Training finished with (acc, loss): {0.88633335}, {0.51426703}.
+(2023-08-23 01:04:20,611) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:04:20,611) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:04:20,611) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:04:20,611) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:04:20,611) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:04:20,997) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:04:20,998) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:04:20,999) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:04:21,000) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:04:21,001) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:04:21,003) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:04:21,003) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 01:04:22,096) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:04:22,292) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:04:22,991) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:04:26,117) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:04:26,352) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:04:33,016) Device.roll_call> 5 of 5 devices replied.
+(2023-08-23 01:04:33,017) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:04:33,210) Model.test> Testing finished with (acc, loss): {0.88000000}, {0.52279270}.
+(2023-08-23 01:04:33,213) Device.start_the_music> Training round {12} of {25}
+(2023-08-23 01:04:33,213) Model.train> Training for 40 epochs.
+(2023-08-23 01:05:14,834) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:05:16,729) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:05:16,797) Model.test> Training finished with (acc, loss): {0.88900000}, {0.50760931}.
+(2023-08-23 01:05:16,798) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:05:16,798) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:05:16,798) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:05:16,798) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:05:16,799) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:05:17,186) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:05:17,187) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:05:17,188) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:05:17,189) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:05:17,190) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:05:17,192) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:05:17,192) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 01:05:18,513) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:05:18,599) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:05:19,071) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:05:21,208) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:05:21,705) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:05:29,205) Device.roll_call> 5 of 5 devices replied.
+(2023-08-23 01:05:29,205) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:05:29,502) Model.test> Testing finished with (acc, loss): {0.88110000}, {0.51746404}.
+(2023-08-23 01:05:29,503) Device.start_the_music> Training round {13} of {25}
+(2023-08-23 01:05:29,503) Model.train> Training for 40 epochs.
+(2023-08-23 01:06:09,639) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:06:12,043) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:06:12,120) Model.test> Training finished with (acc, loss): {0.88800001}, {0.50271159}.
+(2023-08-23 01:06:12,120) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:06:12,121) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:06:12,121) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:06:12,121) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:06:12,121) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:06:12,506) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:06:12,507) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:06:12,508) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:06:12,509) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:06:12,510) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:06:12,512) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:06:12,512) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 01:06:12,733) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:06:12,880) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:06:13,020) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:06:15,555) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:06:18,103) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:06:24,525) Device.roll_call> 5 of 5 devices replied.
+(2023-08-23 01:06:24,525) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:06:24,842) Model.test> Testing finished with (acc, loss): {0.88230002}, {0.51209760}.
+(2023-08-23 01:06:24,846) Device.start_the_music> Training round {14} of {25}
+(2023-08-23 01:06:24,846) Model.train> Training for 40 epochs.
+(2023-08-23 01:07:04,434) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:07:05,128) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:07:07,383) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:07:07,965) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:07:08,040) Model.test> Training finished with (acc, loss): {0.88999999}, {0.49693212}.
+(2023-08-23 01:07:08,041) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:07:08,041) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:07:08,041) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:07:08,041) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:07:08,041) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:07:08,255) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:07:08,440) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:07:08,442) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:07:08,443) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:07:08,444) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:07:08,445) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:07:08,447) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:07:08,447) Device.roll_call> Waiting for: 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 01:07:11,045) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:07:11,224) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:07:18,458) Device.roll_call> 4 of 4 devices replied.
+(2023-08-23 01:07:18,458) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:07:18,638) Model.test> Testing finished with (acc, loss): {0.88279998}, {0.50729299}.
+(2023-08-23 01:07:18,643) Device.start_the_music> Training round {15} of {25}
+(2023-08-23 01:07:18,643) Model.train> Training for 40 epochs.
+(2023-08-23 01:07:59,267) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:08:02,516) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:08:03,537) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:08:03,575) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:08:03,612) Model.test> Training finished with (acc, loss): {0.89099997}, {0.49237403}.
+(2023-08-23 01:08:03,613) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:08:03,613) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:08:03,613) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:08:03,614) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:08:03,614) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:08:03,875) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:08:04,011) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:08:04,013) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:08:04,014) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:08:04,015) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:08:04,016) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:08:04,018) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:08:04,018) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 01:08:06,427) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:08:06,936) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:08:14,029) Device.roll_call> 5 of 5 devices replied.
+(2023-08-23 01:08:14,029) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:08:14,299) Model.test> Testing finished with (acc, loss): {0.88340002}, {0.50251007}.
+(2023-08-23 01:08:14,302) Device.start_the_music> Training round {16} of {25}
+(2023-08-23 01:08:14,302) Model.train> Training for 40 epochs.
+(2023-08-23 01:08:52,497) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:08:53,918) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:08:56,606) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:08:57,607) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:08:57,675) Model.test> Training finished with (acc, loss): {0.89266664}, {0.48677686}.
+(2023-08-23 01:08:57,676) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:08:57,676) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:08:57,676) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:08:57,676) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:08:57,676) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:08:58,033) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:08:58,076) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:08:58,078) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:08:58,079) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:08:58,080) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:08:58,081) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:08:58,083) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:08:58,083) Device.roll_call> Waiting for: 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 01:09:00,217) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:09:01,258) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:09:08,094) Device.roll_call> 4 of 4 devices replied.
+(2023-08-23 01:09:08,094) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:09:08,259) Model.test> Testing finished with (acc, loss): {0.88450003}, {0.49833116}.
+(2023-08-23 01:09:08,262) Device.start_the_music> Training round {17} of {25}
+(2023-08-23 01:09:08,262) Model.train> Training for 40 epochs.
+(2023-08-23 01:09:45,145) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:09:47,480) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:09:49,619) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:09:51,402) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:09:51,460) Model.test> Training finished with (acc, loss): {0.89266664}, {0.48288915}.
+(2023-08-23 01:09:51,461) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:09:51,461) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:09:51,461) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:09:51,461) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:09:51,461) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:09:51,848) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:09:51,850) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:09:51,851) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:09:51,852) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:09:51,853) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:09:51,855) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:09:51,855) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.19, 127.0.0.1
+(2023-08-23 01:09:51,939) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:09:55,425) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:09:57,029) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:10:03,868) Device.roll_call> 3 of 3 devices replied.
+(2023-08-23 01:10:03,868) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:10:04,032) Model.test> Testing finished with (acc, loss): {0.88529998}, {0.49414504}.
+(2023-08-23 01:10:04,033) Device.start_the_music> Training round {18} of {25}
+(2023-08-23 01:10:04,033) Model.train> Training for 40 epochs.
+(2023-08-23 01:10:42,241) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:10:45,953) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:10:47,309) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:10:47,603) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:10:47,672) Model.test> Training finished with (acc, loss): {0.89399999}, {0.47901759}.
+(2023-08-23 01:10:47,672) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:10:47,672) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:10:47,673) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:10:47,673) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:10:47,673) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:10:48,069) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:10:48,071) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:10:48,072) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:10:48,074) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:10:48,075) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:10:48,076) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:10:48,076) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 01:10:48,937) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:10:51,316) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:10:52,255) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:10:58,087) Device.roll_call> 5 of 5 devices replied.
+(2023-08-23 01:10:58,088) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:10:58,239) Model.test> Testing finished with (acc, loss): {0.88590002}, {0.49024945}.
+(2023-08-23 01:10:58,242) Device.start_the_music> Training round {19} of {25}
+(2023-08-23 01:10:58,242) Model.train> Training for 40 epochs.
+(2023-08-23 01:11:39,157) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:11:42,890) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:11:42,998) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:11:43,071) Model.test> Training finished with (acc, loss): {0.89499998}, {0.47525170}.
+(2023-08-23 01:11:43,072) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:11:43,072) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:11:43,072) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:11:43,072) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:11:43,072) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:11:43,471) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:11:43,472) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:11:43,473) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:11:43,475) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:11:43,475) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:11:43,477) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:11:43,477) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 01:11:43,579) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:11:45,001) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:11:45,795) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:11:46,823) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:11:53,488) Device.roll_call> 5 of 5 devices replied.
+(2023-08-23 01:11:53,488) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:11:53,646) Model.test> Testing finished with (acc, loss): {0.88650000}, {0.48672420}.
+(2023-08-23 01:11:53,649) Device.start_the_music> Training round {20} of {25}
+(2023-08-23 01:11:53,649) Model.train> Training for 40 epochs.
+(2023-08-23 01:12:35,253) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:12:37,771) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:12:37,848) Model.test> Training finished with (acc, loss): {0.89466667}, {0.47149104}.
+(2023-08-23 01:12:37,849) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:12:37,849) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:12:37,849) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:12:37,849) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:12:37,849) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:12:38,245) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:12:38,247) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:12:38,249) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:12:38,250) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:12:38,251) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:12:38,252) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:12:38,252) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 01:12:38,724) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:12:39,257) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:12:39,344) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:12:41,716) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:12:42,513) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:12:48,263) Device.roll_call> 5 of 5 devices replied.
+(2023-08-23 01:12:48,264) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:12:48,502) Model.test> Testing finished with (acc, loss): {0.88739997}, {0.48313472}.
+(2023-08-23 01:12:48,504) Device.start_the_music> Training round {21} of {25}
+(2023-08-23 01:12:48,504) Model.train> Training for 40 epochs.
+(2023-08-23 01:13:30,986) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:13:31,917) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:13:32,265) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:13:32,341) Model.test> Training finished with (acc, loss): {0.89666665}, {0.46781078}.
+(2023-08-23 01:13:32,342) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:13:32,342) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:13:32,342) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:13:32,342) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:13:32,343) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:13:32,744) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:13:32,746) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:13:32,747) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:13:32,748) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:13:32,749) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:13:32,751) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:13:32,751) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 01:13:33,143) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:13:34,036) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:13:36,651) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:13:38,390) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:13:44,764) Device.roll_call> 5 of 5 devices replied.
+(2023-08-23 01:13:44,764) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:13:44,964) Model.test> Testing finished with (acc, loss): {0.88760000}, {0.47973108}.
+(2023-08-23 01:13:44,967) Device.start_the_music> Training round {22} of {25}
+(2023-08-23 01:13:44,967) Model.train> Training for 40 epochs.
+(2023-08-23 01:14:19,833) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:14:21,716) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:14:27,838) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:14:27,885) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:14:28,848) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:14:28,926) Model.test> Training finished with (acc, loss): {0.89700001}, {0.46379611}.
+(2023-08-23 01:14:28,926) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:14:28,926) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:14:28,927) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:14:28,927) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:14:28,927) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:14:29,324) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:14:29,326) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:14:29,327) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:14:29,329) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:14:29,330) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:14:29,331) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:14:29,331) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.1
+(2023-08-23 01:14:31,570) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:14:31,791) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:14:39,342) Device.roll_call> 4 of 4 devices replied.
+(2023-08-23 01:14:39,342) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:14:39,516) Model.test> Testing finished with (acc, loss): {0.88800001}, {0.47665530}.
+(2023-08-23 01:14:39,519) Device.start_the_music> Training round {23} of {25}
+(2023-08-23 01:14:39,519) Model.train> Training for 40 epochs.
+(2023-08-23 01:15:15,308) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:15:22,670) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:15:23,486) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:15:23,506) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:15:23,556) Model.test> Training finished with (acc, loss): {0.89733332}, {0.46096712}.
+(2023-08-23 01:15:23,557) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:15:23,557) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:15:23,557) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:15:23,557) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:15:23,557) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:15:23,940) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:15:23,941) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:15:23,942) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:15:23,944) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:15:23,945) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:15:23,946) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:15:23,946) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1
+(2023-08-23 01:15:25,591) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:15:26,952) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:15:27,924) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:15:33,957) Device.roll_call> 5 of 5 devices replied.
+(2023-08-23 01:15:33,957) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:15:34,123) Model.test> Testing finished with (acc, loss): {0.88889998}, {0.47341967}.
+(2023-08-23 01:15:34,123) Device.start_the_music> Training round {24} of {25}
+(2023-08-23 01:15:34,123) Model.train> Training for 40 epochs.
+(2023-08-23 01:16:10,601) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:16:13,210) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:16:16,660) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:16:16,729) Model.test> Training finished with (acc, loss): {0.89766669}, {0.45750797}.
+(2023-08-23 01:16:16,730) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:16:16,730) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:16:16,730) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:16:16,730) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:16:16,730) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:16:16,941) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:16:17,118) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:16:17,119) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:16:17,120) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:16:17,122) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:16:17,123) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:16:17,124) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:16:17,124) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.1
+(2023-08-23 01:16:18,448) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:16:21,607) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:16:22,493) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:16:29,138) Device.roll_call> 4 of 4 devices replied.
+(2023-08-23 01:16:29,139) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:16:29,309) Model.test> Testing finished with (acc, loss): {0.88929999}, {0.47049505}.
+(2023-08-23 01:16:29,312) Device.start_the_music> Training round {25} of {25}
+(2023-08-23 01:16:29,312) Model.train> Training for 40 epochs.
+(2023-08-23 01:17:12,108) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.9:0 [Received].
+(2023-08-23 01:17:12,398) Model.train> Finised at/after -1.00 seconds 40 epochs 24 batches.
+(2023-08-23 01:17:12,473) Model.test> Training finished with (acc, loss): {0.89899999}, {0.45507526}.
+(2023-08-23 01:17:12,474) Graph.get_activations> Activating 8 subgraphs with 60 edges.
+(2023-08-23 01:17:12,474) Graph.get_activations> Activations: 
+| subgraph-0 (\w 1.00000000 probability): [127.0.0.3->127.0.0.4, 127.0.0.18->127.0.0.6, 127.0.0.13->127.0.0.16, 127.0.0.11->127.0.0.10, 127.0.0.14->127.0.0.7, 127.0.0.9->127.0.0.17, 127.0.0.19->127.0.0.8, 127.0.0.15->127.0.0.12, 127.0.0.1->127.0.0.2, 127.0.0.20->127.0.0.5]
+| subgraph-1 (\w 1.00000000 probability): [127.0.0.14->127.0.0.4, 127.0.0.19->127.0.0.16, 127.0.0.9->127.0.0.15, 127.0.0.1->127.0.0.20, 127.0.0.11->127.0.0.12, 127.0.0.5->127.0.0.6, 127.0.0.2->127.0.0.3, 127.0.0.18->127.0.0.8, 127.0.0.10->127.0.0.7]
+| subgraph-2 (\w 1.00000000 probability): [127.0.0.20->127.0.0.9, 127.0.0.1->127.0.0.3, 127.0.0.14->127.0.0.12, 127.0.0.18->127.0.0.16, 127.0.0.11->127.0.0.13, 127.0.0.6->127.0.0.8, 127.0.0.2->127.0.0.4, 127.0.0.19->127.0.0.17, 127.0.0.5->127.0.0.7]
+| subgraph-3 (\w 1.00000000 probability): [127.0.0.1->127.0.0.19, 127.0.0.9->127.0.0.8, 127.0.0.18->127.0.0.17, 127.0.0.4->127.0.0.7, 127.0.0.14->127.0.0.13, 127.0.0.2->127.0.0.5, 127.0.0.20->127.0.0.11, 127.0.0.10->127.0.0.12, 127.0.0.3->127.0.0.6]
+| subgraph-4 (\w 1.00000000 probability): [127.0.0.14->127.0.0.16, 127.0.0.1->127.0.0.18, 127.0.0.15->127.0.0.13, 127.0.0.2->127.0.0.19, 127.0.0.4->127.0.0.5, 127.0.0.6->127.0.0.7, 127.0.0.3->127.0.0.10, 127.0.0.20->127.0.0.17]
+| subgraph-5 (\w 1.00000000 probability): [127.0.0.5->127.0.0.8, 127.0.0.4->127.0.0.6, 127.0.0.15->127.0.0.17, 127.0.0.10->127.0.0.13, 127.0.0.2->127.0.0.9, 127.0.0.20->127.0.0.18, 127.0.0.1->127.0.0.14]
+| subgraph-6 (\w 1.00000000 probability): [127.0.0.12->127.0.0.13, 127.0.0.1->127.0.0.11, 127.0.0.7->127.0.0.8, 127.0.0.3->127.0.0.14, 127.0.0.20->127.0.0.19, 127.0.0.17->127.0.0.16, 127.0.0.6->127.0.0.15]
+| subgraph-7 (\w 1.00000000 probability): [127.0.0.19->127.0.0.18]
+(2023-08-23 01:17:12,474) Device.start_the_music> Sharing weights with {6}: [127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9]
+(2023-08-23 01:17:12,474) Device.start_the_music> Number of shares: 6
+(2023-08-23 01:17:12,475) Model.compute_fim> Computing Fisher information matrix
+(2023-08-23 01:17:12,522) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.3:0 [Received].
+(2023-08-23 01:17:12,875) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.4:4000 [Sent].
+(2023-08-23 01:17:12,876) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.3:4000 [Sent].
+(2023-08-23 01:17:12,877) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.19:4000 [Sent].
+(2023-08-23 01:17:12,878) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.5:4000 [Sent].
+(2023-08-23 01:17:12,880) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.1:4000 [Sent].
+(2023-08-23 01:17:12,882) Comm.send> Sending <Model Update> packet from 127.0.0.2:0 to 127.0.0.9:4000 [Sent].
+(2023-08-23 01:17:12,882) Device.roll_call> Waiting for: 127.0.0.4, 127.0.0.3, 127.0.0.19, 127.0.0.5, 127.0.0.1, 127.0.0.9
+(2023-08-23 01:17:13,618) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.4:0 [Received].
+(2023-08-23 01:17:14,885) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.5:0 [Received].
+(2023-08-23 01:17:16,741) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.1:0 [Received].
+(2023-08-23 01:17:16,808) Comm.recv_tcp_packet> Receiving <Model Update> packet from 127.0.0.19:0 [Received].
+(2023-08-23 01:17:24,894) Device.roll_call> 6 of 6 devices replied.
+(2023-08-23 01:17:24,894) Model.merge> Merging weights from 6 devices
+(2023-08-23 01:17:25,096) Model.test> Testing finished with (acc, loss): {0.88959998}, {0.46763247}.
+(2023-08-23 01:17:25,102) Device.start_the_music> Training Finished.
+(2023-08-23 01:17:25,102) Device.stop> Device will stop listening and responding.
+(2023-08-23 01:17:26,050) Comm.udp_listener> Stopped listening for UDP packets at port 4001.
+(2023-08-23 01:17:26,335) Comm.responder> Stopped responding.
+(2023-08-23 01:17:26,818) Comm.tcp_listener> Stopped listening for TCP packets at port 4000.
+(2023-08-23 01:17:35,110) Comm.send> Sending <Adios!> packet from 127.0.0.2:0 to 127.0.0.250:4000 [Sent].
