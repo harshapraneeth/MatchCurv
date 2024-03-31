@@ -242,7 +242,10 @@ if __name__ == "__main__":
     '''
 
     locations = [
-        "tiny-imagenet/noniid/"
+        "tiny-imagenet/noniid/",
+        "tiny-imagenet/matcha/",
+        "tiny-imagenet/stragglers/",
+        "tiny-imagenet/fedcurv/"
     ]
 
     '''
