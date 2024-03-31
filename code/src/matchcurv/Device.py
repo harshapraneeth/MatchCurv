@@ -174,6 +174,14 @@ class Device:
                 self.random,
                 self.config["mode"] == "sync"
             )
+            
+        elif self.config["model"] == "ResNet":
+
+            self.model = ResNet(
+                self.logger, # type: ignore
+                self.random,
+                self.config["mode"] == "sync"
+            )
 
         self.model.create(
             self.config["input_shape"],

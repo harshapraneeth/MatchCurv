@@ -7,6 +7,7 @@ import tensorflow as tf
 import numpy as np
 import pickle
 import threading
+import keras
 import time
 
 from Logger import *
@@ -20,7 +21,7 @@ class Model:
     '''
 
     def __init__(
-        self, 
+        self,
         logger: Logger,
         random: Random,
         sync: bool
@@ -35,7 +36,7 @@ class Model:
         in a queue to be merged when needed.
         '''
 
-        self.model: tf.keras.models.Model
+        self.model: keras.models.Model
         self.fim: list = []
 
         self.model_queue: dict [int, dict [str, list]] = {}
@@ -78,20 +79,19 @@ class Model:
         Hyperparameters.
         '''
 
-        self.optimizer: tf.keras.optimizers.Optimizer
-        self.loss_fn: tf.keras.losses.Loss
-        self.metric_fn: tf.keras.metrics.Metric
+        self.optimizer: keras.optimizers.Optimizer
+        self.loss_fn: keras.losses.Loss
+        self.metric_fn: keras.metrics.Metric
 
         self.learning_rate: float
         self.l2_term: float
         self.prox_term: float
         self.curv_term: float
-
     
     def create(
-        self, 
-        input_shape, 
-        num_outputs, 
+        self,
+        input_shape,
+        num_outputs,
         learning_rate,
         l2_term,
         prox_term,
@@ -104,21 +104,20 @@ class Model:
         self.prox_term = prox_term
         self.curv_term = curv_term
 
-        self.optimizer = tf.keras.optimizers.SGD(
-            learning_rate = learning_rate,
-            clipnorm = 1.0
+        self.optimizer = keras.optimizers.SGD(
+            learning_rate=learning_rate,
+            clipnorm=1.0
         )
 
-        self.loss_fn = tf.keras.losses.SparseCategoricalCrossentropy(
+        self.loss_fn = keras.losses.SparseCategoricalCrossentropy(
             from_logits=True
         )
 
-        self.metric_fn = tf.keras.metrics.SparseCategoricalAccuracy()
-
+        self.metric_fn = keras.metrics.SparseCategoricalAccuracy()
 
     def preheat(
-        self, 
-        train_files: list [str], 
+        self,
+        train_files: list [str],
         test_files: list [str],
         label_distribution: tuple [float, float],
         sample_distribution: tuple [float, float]
@@ -135,7 +134,7 @@ class Model:
 
         train_files = train_files[ls:le] + (
             [] if le <= len(train_files) 
-            else train_files[ :le - len(train_files)]
+            else train_files[:le - len(train_files)]
         )
 
         if self.logger: self.logger.log(
@@ -163,33 +162,32 @@ class Model:
 
                     data = pickle.load(file)
                     n = data[0].shape[0]
-
+                    
                     if se > 1:
 
                         self.x_train.append(
                             np.vstack((
-                                data[1][int(ss*n) : int(se*n)],
-                                data[1][ : int((se-1)*n)]
+                                data[1][int(ss * n): int(se * n)],
+                                data[1][: int((se - 1) * n)]
                             ))
                         )
  
                         self.y_train.append(
                             np.hstack((
-                                data[0][int(ss*n) : int(se*n)],
-                                data[0][ : int((se-1)*n)]
+                                data[0][int(ss * n): int(se * n)],
+                                data[0][: int((se - 1) * n)]
                             ))
                         )
 
                     else:
 
                         self.x_train.append(
-                            data[1][int(ss*n) : int(se*n)]
+                            data[1][int(ss * n): int(se * n)]
                         )
 
                         self.y_train.append(
-                            data[0][int(ss*n) : int(se*n)]
+                            data[0][int(ss * n): int(se * n)]
                         )
-
 
             except Exception as e: print(e)
 
@@ -211,8 +209,7 @@ class Model:
 
             except Exception as e: print(e)
 
-
-    def compute_fim(self, num_samples = 100):
+    def compute_fim(self, num_samples=100):
 
         '''
         To compute the Fisher information matrix.
@@ -247,11 +244,10 @@ class Model:
                 grads = tape.gradient(logits, self.model.weights)
 
                 for i in range(m):
-                    self.fim[i] += grads[i] ** 2
+                    self.fim[i] += grads[i] ** 2  # type: ignore
 
         for i in range(m):
             self.fim[i] /= num_samples
-
 
     def timer(self, timeout: int):
 
@@ -267,7 +263,7 @@ class Model:
             "Interrupt timer started."
         )
             
-        t, dt = 0, max(1, timeout//100)
+        t, dt = 0, max(1, timeout // 100)
         while t < timeout:
 
             with self.interrupt_lock:
@@ -283,14 +279,13 @@ class Model:
             "Model.timer",
             "Interrupt timer ended."
         )
-
     
     def train(
         self,
-        num_seconds: float = -1,
-        num_epochs: int = 1, 
-        batch_size: int = 256,
-        dataset = None
+        num_seconds: float=-1,
+        num_epochs: int=1,
+        batch_size: int=256,
+        dataset=None
     ) -> tuple [float, float]:
 
         '''
@@ -301,7 +296,7 @@ class Model:
             "Model.train",
             "Training for %s.",
             (
-                ("%d epochs" % num_epochs) if num_seconds <=0
+                ("%d epochs" % num_epochs) if num_seconds <= 0
                 else ("%d seconds" % num_seconds)
             )
         )
@@ -331,8 +326,8 @@ class Model:
         if num_seconds > 0:
 
             timer = threading.Thread(
-                target = self.timer,
-                args = (num_seconds, )
+                target=self.timer,
+                args=(num_seconds,)
             )
 
             timer.start()
@@ -357,7 +352,8 @@ class Model:
 
             epoch = e
             batch = 0
-            for X_batch, Y_batch in dataset:
+            
+            for X_batch, Y_batch in dataset:  # type: ignore
                 batch += 1
 
                 with self.interrupt_lock:
@@ -411,7 +407,7 @@ class Model:
                         with self.lock:
 
                             n = len(self.fim)
-                            if n>0:
+                            if n > 0:
 
                                 k = tf.constant(0.5 * self.curv_term)
                                 ips = list(self.received_fims.keys())
@@ -460,7 +456,7 @@ class Model:
             with self.interrupt_lock:
                 self.interrupt = True
 
-            timer.join(num_seconds) # type: ignore
+            timer.join(num_seconds)  # type: ignore
 
         if self.logger: self.logger.log(
             "Model.train",
@@ -469,15 +465,14 @@ class Model:
         )
 
         return self.test(
-            set = "train", 
-            dataset = dataset.rebatch(5000)
+            set="train",
+            dataset=dataset.rebatch(5000)
         )
 
-
     def test(
-        self, 
-        set = "eval", 
-        dataset = None
+        self,
+        set="eval",
+        dataset=None
     ) -> tuple [float, float]:
         
         '''
@@ -503,16 +498,16 @@ class Model:
         acc, loss = 0, 0
         num_batches = 0
 
-        for X_batch, Y_batch in dataset:
+        for X_batch, Y_batch in dataset:  # type: ignore
 
             num_batches += 1
             logits = self.model(X_batch, training=False)
-            loss += self.loss_fn(Y_batch, logits)
+            loss += self.loss_fn(Y_batch, logits)  # type: ignore
             self.metric_fn.update_state(Y_batch, logits)
         
         loss = float(loss) / max(1.0, num_batches)
         acc = float(self.metric_fn.result())
-        self.metric_fn.reset_states()
+        self.metric_fn.reset_state()
 
         if set == "eval":
 
@@ -537,7 +532,6 @@ class Model:
             )
 
         return acc, loss
-
 
     def merge(self, r: int) -> None:
         
@@ -571,11 +565,11 @@ class Model:
             )
                 
             tf.nest.map_structure(
-                lambda v, t: v.assign(t), 
+                lambda v, t: v.assign(t),
                 self.model.weights,
                 tf.nest.map_structure(
-                    lambda *x: n_ * tf.add_n(x), # type: ignore
-                    *(
+                    lambda *x: n_ * tf.add_n(x),  # type: ignore
+                    * (
                         list(self.model_queue[r].values()) + 
                         [self.model.weights]
                     )
@@ -594,9 +588,9 @@ class MLP(Model):
     '''
 
     def create(
-        self, 
-        input_shape, 
-        num_outputs, 
+        self,
+        input_shape,
+        num_outputs,
         learning_rate,
         l2_term,
         prox_term,
@@ -605,8 +599,8 @@ class MLP(Model):
     ) -> None:
         
         super().create(
-            input_shape, 
-            num_outputs, 
+            input_shape,
+            num_outputs,
             learning_rate,
             l2_term,
             prox_term,
@@ -614,34 +608,33 @@ class MLP(Model):
             *args
         )
 
-        self.model = tf.keras.models.Sequential()
+        self.model = keras.models.Sequential()
         
         self.model.add(
-            tf.keras.layers.Flatten(
-                input_shape = input_shape
+            keras.layers.Flatten(
+                input_shape=input_shape
             )
         )
 
         for units in args:
 
             self.model.add(
-                tf.keras.layers.Dense(
-                    units = units, 
-                    activation = "relu",
-                    kernel_regularizer = tf.keras.regularizers.l2(l2_term)
+                keras.layers.Dense(
+                    units=units,
+                    activation="relu",
+                    kernel_regularizer=keras.regularizers.l2(l2_term)
                 )
             )
 
         self.model.add(
-            tf.keras.layers.Dense(
-                units = num_outputs,
-                kernel_regularizer = tf.keras.regularizers.l2(l2_term)
+            keras.layers.Dense(
+                units=num_outputs,
+                kernel_regularizer=keras.regularizers.l2(l2_term)
             )
         )
 
         if self.random: self.model.set_weights(self.random.model)
         # self.model.summary()
-
 
     '''
     def compute_fim(self):
@@ -696,9 +689,9 @@ class CNN(Model):
     '''
 
     def create(
-        self, 
-        input_shape, 
-        num_outputs, 
+        self,
+        input_shape,
+        num_outputs,
         learning_rate,
         l2_term,
         prox_term,
@@ -707,8 +700,8 @@ class CNN(Model):
     ) -> None:
         
         super().create(
-            input_shape, 
-            num_outputs, 
+            input_shape,
+            num_outputs,
             learning_rate,
             l2_term,
             prox_term,
@@ -716,42 +709,42 @@ class CNN(Model):
             *args
         )
 
-        self.model = tf.keras.models.Sequential()
+        self.model = keras.models.Sequential()
 
         for filters in args[0]:
 
             self.model.add(
-                tf.keras.layers.Conv2D(
-                    filters = filters, 
-                    kernel_size = (3, 3), 
-                    activation = "relu",
-                    input_shape = input_shape,
-                    kernel_regularizer = tf.keras.regularizers.l2(l2_term)
+                keras.layers.Conv2D(
+                    filters=filters,
+                    kernel_size=(3, 3),
+                    activation="relu",
+                    input_shape=input_shape,
+                    kernel_regularizer=keras.regularizers.l2(l2_term)
                 )
             )
 
             self.model.add(
-                tf.keras.layers.MaxPooling2D()
+                keras.layers.MaxPooling2D()
             )
         
         self.model.add(
-            tf.keras.layers.Flatten()
+            keras.layers.Flatten()
         )
 
         for units in args[1]:
 
             self.model.add(
-                tf.keras.layers.Dense(
-                    units = units, 
-                    activation = "relu",
-                    kernel_regularizer = tf.keras.regularizers.l2(l2_term)
+                keras.layers.Dense(
+                    units=units,
+                    activation="relu",
+                    kernel_regularizer=keras.regularizers.l2(l2_term)
                 )
             )
 
         self.model.add(
-            tf.keras.layers.Dense(
-                units = num_outputs,
-                kernel_regularizer = tf.keras.regularizers.l2(l2_term)
+            keras.layers.Dense(
+                units=num_outputs,
+                kernel_regularizer=keras.regularizers.l2(l2_term)
             )
         )
 
@@ -766,9 +759,9 @@ class LeNet5(Model):
     '''
 
     def create(
-        self, 
-        input_shape, 
-        num_outputs, 
+        self,
+        input_shape,
+        num_outputs,
         learning_rate,
         l2_term,
         prox_term,
@@ -777,8 +770,8 @@ class LeNet5(Model):
     ) -> None:
         
         super().create(
-            input_shape, 
-            num_outputs, 
+            input_shape,
+            num_outputs,
             learning_rate,
             l2_term,
             prox_term,
@@ -786,76 +779,212 @@ class LeNet5(Model):
             *args
         )
 
-        self.model = tf.keras.models.Sequential()
+        self.model = keras.models.Sequential()
 
         self.model.add(
-            tf.keras.layers.Conv2D(
-                filters = 6, 
-                kernel_size = (5, 5), 
-                strides = (1, 1), 
-                activation = "relu", 
-                input_shape = input_shape, 
-                padding = "same",
-                kernel_regularizer = tf.keras.regularizers.l2(l2_term)
+            keras.layers.Conv2D(
+                filters=6,
+                kernel_size=(5, 5),
+                strides=(1, 1),
+                activation="relu",
+                input_shape=input_shape,
+                padding="same",
+                kernel_regularizer=keras.regularizers.l2(l2_term)
             )
         )
 
         self.model.add(
-            tf.keras.layers.AveragePooling2D(
-                pool_size = (2, 2), 
-                strides = (2, 2), 
-                padding = "valid"
+            keras.layers.AveragePooling2D(
+                pool_size=(2, 2),
+                strides=(2, 2),
+                padding="valid"
             )
         )
 
         self.model.add(
-            tf.keras.layers.Conv2D(
-                filters = 16, 
-                kernel_size = (5, 5), 
-                strides = (1, 1), 
-                activation = "relu",  
-                padding = "valid",
-                kernel_regularizer = tf.keras.regularizers.l2(l2_term)
+            keras.layers.Conv2D(
+                filters=16,
+                kernel_size=(5, 5),
+                strides=(1, 1),
+                activation="relu",
+                padding="valid",
+                kernel_regularizer=keras.regularizers.l2(l2_term)
             )
         )
 
         self.model.add(
-            tf.keras.layers.AveragePooling2D(
-                pool_size = (2, 2), 
-                strides = (2, 2), 
-                padding = "valid"
+            keras.layers.AveragePooling2D(
+                pool_size=(2, 2),
+                strides=(2, 2),
+                padding="valid"
             )
         )
         
         self.model.add(
-            tf.keras.layers.Flatten()
+            keras.layers.Flatten()
         )
 
         self.model.add(
-            tf.keras.layers.Dense(
-                units = 120, 
-                activation = "relu",
-                kernel_regularizer = tf.keras.regularizers.l2(l2_term)
+            keras.layers.Dense(
+                units=120,
+                activation="relu",
+                kernel_regularizer=keras.regularizers.l2(l2_term)
             )
         )
 
         self.model.add(
-            tf.keras.layers.Dense(
-                units = 84, 
-                activation = "relu",
-                kernel_regularizer = tf.keras.regularizers.l2(l2_term)
+            keras.layers.Dense(
+                units=84,
+                activation="relu",
+                kernel_regularizer=keras.regularizers.l2(l2_term)
             )
         )
 
         self.model.add(
-            tf.keras.layers.Dense(
-                units = num_outputs,
-                kernel_regularizer = tf.keras.regularizers.l2(l2_term)
+            keras.layers.Dense(
+                units=num_outputs,
+                kernel_regularizer=keras.regularizers.l2(l2_term)
             )
         )
 
         if self.random: self.model.set_weights(self.random.model)
         # self.model.summary()
+
+
+class ResNet(Model):
+    
+    '''Create a ResNet-20'''
+    # https://github.com/christianversloot/machine-learning-articles/blob/main/how-to-build-a-resnet-from-scratch-with-tensorflow-2-and-keras.md
+    
+    def create(
+        self,
+        input_shape,
+        num_outputs,
+        learning_rate,
+        l2_term,
+        prox_term,
+        curv_term,
+        *args
+    ) -> None:
+
+        super().create(
+            input_shape,
+            num_outputs,
+            learning_rate,
+            l2_term,
+            prox_term,
+            curv_term,
+            *args
+        )
+        
+        stack_n, initial_num_feature_maps, shortcut_type = args
+
+        inputs = keras.layers.Input(shape=input_shape)
+        
+        x = keras.layers.Conv2D(
+            initial_num_feature_maps, 
+            kernel_size=(3,3),
+            strides=(1,1),
+            padding="same"
+        )(inputs)
+        
+        x = keras.layers.BatchNormalization()(x)
+        
+        x = keras.layers.Activation("relu")(x)
+        
+        filter_size = initial_num_feature_maps
+        
+        for layer_group in range(3):
+            
+            for block in range(stack_n):
+                
+                if layer_group > 0 and block == 0:
+                    
+                    filter_size *= 2
+                    x = self.residual_block(x, filter_size, True, shortcut_type)
+                
+                else:
+                    
+                    x = self.residual_block(x, filter_size, False, shortcut_type)
+        
+        x = keras.layers.GlobalAveragePooling2D()(x)
+        
+        x = keras.layers.Flatten()(x)
+        
+        outputs = keras.layers.Dense(num_outputs)(x)
+
+        self.model = keras.models.Model(
+            inputs, outputs
+        )
+        
+    @staticmethod
+    def residual_block(x, number_of_filters, match_filter_size, shortcut_type):
+
+        # Create skip connection
+        
+        x_skip = x
+
+        # Perform the original mapping
+        
+        if match_filter_size:
+            
+            x = keras.layers.Conv2D(
+                number_of_filters, 
+                kernel_size=(3, 3), strides=(2,2),
+                padding="same"
+            )(x_skip)
+            
+        else:
+            
+            x = keras.layers.Conv2D(
+                    number_of_filters,
+                    kernel_size=(3, 3), 
+                    strides=(1,1),
+                    padding="same"
+            )(x_skip)
+            
+        x = keras.layers.BatchNormalization(axis=3)(x)
+        
+        x = keras.layers.Activation("relu")(x)
+        
+        x = keras.layers.Conv2D(
+            number_of_filters, 
+            kernel_size=(3, 3),
+            padding="same"
+        )(x)
+        
+        x = keras.layers.BatchNormalization(axis=3)(x)
+
+        # Perform matching of filter numbers if necessary
+        
+        if match_filter_size and shortcut_type == "identity":
+            
+            x_skip = keras.layers.Lambda(
+                lambda x: tf.pad(
+                    x[:, ::2, ::2, :], 
+                    tf.constant([[0, 0,], [0, 0], [0, 0], [number_of_filters//4, number_of_filters//4]]),                 
+                    mode="CONSTANT"
+                )
+            )(x_skip)
+            
+        elif match_filter_size and shortcut_type == "projection":
+            
+            x_skip = keras.layers.Conv2D(
+                number_of_filters, 
+                kernel_size=(1,1),
+                strides=(2,2)
+            )(x_skip)
+
+        # Add the skip connection to the regular mapping
+        
+        x = keras.layers.Add()([x, x_skip])
+
+        # Nonlinearly activate the result
+        
+        x = keras.layers.Activation("relu")(x)
+
+        # Return the result
+        return x
 
 
 if __name__ == "__main__":
@@ -864,65 +993,80 @@ if __name__ == "__main__":
     Testing script.
     '''
 
-    random = Random("", "", "../../_model_presets/mclr_preset_1.b")
+    try:
 
-    model = MLP(None, random, True) # type: ignore
-    model.create(
-        [28, 28, 1], 10,
-        0.01, 0, 0, 0
-    )
+        stack_n = 3
+        initial_num_feature_maps = 16
+        shortcut_type = "identity" # or: projection
 
-    train_files = ["../../datasets/fashion-mnist/train/label_%d.b" % i for i in range(10)]
-    test_files = ["../../datasets/fashion-mnist/test/label_%d.b" % i for i in range(10)]
+        input_shape = [64, 64, 3]
+        output_shape = 20
 
-    model.preheat(
-        train_files,
-        test_files,
-        (0, 10),
-        (0, 1)
-    )
+        logger = Logger("../../logs/resnet-test/")
 
-    from tqdm import tqdm
+        model = ResNet(logger, None, True)  # type: ignore
+        model.create(
+            input_shape, output_shape,
+            0.01, 0, 0, 0,
+            stack_n,
+            initial_num_feature_maps,
+            shortcut_type
+        )
 
-    num_rounds = 100
-    num_epochs = 10
-    num_seconds = -1
-    batch_size = 128
+        train_files = ["../../datasets/tiny-imagenet/train/label_%d.b" % i for i in range(output_shape)]
+        test_files = ["../../datasets/tiny-imagenet/test/label_%d.b" % i for i in range(output_shape)]
 
-    for r in tqdm(range(num_rounds)):
+        model.preheat(
+            train_files,
+            test_files,
+            (0, output_shape),
+            (0, 0.1)
+        )
+
+        from tqdm import tqdm
+
+        num_rounds = 5
+        num_epochs = 3
+        num_seconds = -1
+        batch_size = 1024
+
+        for r in tqdm(range(num_rounds)):
+
+            print()
+            print(*model.train(num_seconds, num_epochs, batch_size))
+            print(*model.test())
 
         print()
-        print(*model.train(num_seconds, num_epochs, batch_size))
-        print(*model.test())
 
-    print()
+        if input("enter [y] to dump results: ") == 'y':
 
-    if input("enter [y] to dump results: ")=='y':
+            try:
 
-        try:
+                location = "../../results/resnet_test/"
 
-            location = "../../results/fashion-ml/config_v_ml/"
+                if not os.path.exists(location): 
+                    os.makedirs(location)
 
-            if not os.path.exists(location): 
-                os.makedirs(location)
+                with open(
+                    location + "ml.b", "wb"
+                ) as file:
+                    
+                    result = (
+                        [0] * num_rounds,
+                        model.train_acc,
+                        model.train_loss,
+                        model.test_acc,
+                        model.test_loss
+                    )
 
-            with open(
-                location + "ml.b", "wb"
-            ) as file:
-                
-                result = (
-                    [0]*num_rounds,
-                    model.train_acc,
-                    model.train_loss,
-                    model.test_acc,
-                    model.test_loss
-                )
+                    pickle.dump(result, file)
 
-                pickle.dump(result, file)
+                print("Dumped.")
 
-            print("Dumped.")
+            except Exception as e: print(e)
 
-        except Exception as e: print(e)
-
-    print("Finished.")
+        print("Finished.")
+        
+    except Exception as e:
+        print("Exited with error:", e)
     

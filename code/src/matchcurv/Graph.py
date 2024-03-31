@@ -558,7 +558,12 @@ if __name__ == "__main__":
     comm_bugdet = 0.25
 
     graph = Graph(
-        None, None # type: ignore
+        None, # type: ignore
+        Random(
+            "../../_random_presets/random_preset_0.b",
+            "../../_graph_presets/dense_100.b",
+            ""
+        )
     )
 
     graph.create_random()

@@ -115,7 +115,7 @@ if __name__ == "__main__":
     '''Testing script.'''
 
     random = Random(
-        random_preset = "../../_random_presets/random_preset_0.b",
+        random_preset = "../../_random_presets/random_preset_1.b",
         graph_preset = "", 
         model_preset = ""
     )

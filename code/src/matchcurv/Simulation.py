@@ -242,7 +242,7 @@ if __name__ == "__main__":
     '''
 
     locations = [
-        "test/"
+        "tiny-imagenet/noniid/"
     ]
 
     '''

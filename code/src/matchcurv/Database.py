@@ -1,6 +1,6 @@
-import firebase_admin
+'''import firebase_admin
 from firebase_admin import db
-from firebase_admin import credentials
+from firebase_admin import credentials'''
 from typing import Any
 
 from Logger import *
@@ -34,8 +34,8 @@ class Database:
         self.url = url
         self.id = id
 
-        self.app: firebase_admin.App
-        self.ref: db.Reference
+        '''self.app: firebase_admin.App
+        self.ref: db.Reference'''
 
         self.connected = False
 
@@ -46,7 +46,7 @@ class Database:
         Here we establish the connection to the database.
         '''
 
-        self.app = firebase_admin.initialize_app(
+        '''self.app = firebase_admin.initialize_app(
             credentials.Certificate(self.certificate), 
             {'databaseURL': self.url}
         )
@@ -57,7 +57,7 @@ class Database:
                 self.id: self.id
             })
 
-        self.ref = db.reference(self.id)
+        self.ref = db.reference(self.id)'''
         self.connected = True
 
         if self.logger: self.logger.log(
@@ -72,7 +72,7 @@ class Database:
         We should reset the values at the /id/ path.
         '''
 
-        try:
+        '''try:
 
             self.ref.child("round").set(0)
             self.ref.child("shares").set(0)
@@ -87,7 +87,7 @@ class Database:
                 "Database.reset",
                 "Failed with exception [%s].",
                 str(e)
-            )
+            )'''
 
 
     def set(self, path: str, data: Any) -> None:
@@ -97,7 +97,7 @@ class Database:
         If a value already exists, it is overwritten.
         '''
 
-        try:
+        '''try:
 
             self.ref.child(path).set(data)
 
@@ -113,7 +113,7 @@ class Database:
                 "Database.set",
                 "Failed with exception [%s].",
                 str(e)
-            )
+            )'''
 
 
     def update(self, path: str, data: Any) -> None:
@@ -123,7 +123,7 @@ class Database:
         This is handy to update a child value without resetting the parent.
         '''
 
-        try:
+        '''try:
 
             self.ref.child(path).update(data)
 
@@ -139,7 +139,7 @@ class Database:
                 "Database.update",
                 "Failed with exception [%s].",
                 str(e)
-            )
+            )'''
 
 
     def disconnect(self) -> None:
@@ -148,7 +148,7 @@ class Database:
         Severs the connection with the database.
         '''
 
-        try:
+        '''try:
 
             firebase_admin.delete_app(self.app)
 
@@ -163,12 +163,12 @@ class Database:
                 "Database.disconnect",
                 "Failed with exception [%s].",
                 str(e)
-            )
+            )'''
 
 
 if __name__ == "__main__":
 
-    database = Database(
+    '''database = Database(
         None,               # type: ignore
         certificate = "!!!REDACTED!!!",
         url = "!!!REDACTED!!!",
@@ -187,4 +187,4 @@ if __name__ == "__main__":
         "attributes", {"mu": "0.25", "cb": "0.1"}
     )
 
-    database.disconnect()
+    database.disconnect()'''
