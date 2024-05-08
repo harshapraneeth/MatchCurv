@@ -1,5 +1,12 @@
 # MatchCurv
 
+## Requirements
+
+Make sure to install all the required libraries with
+```shell
+> pip install -r requirements.txt
+```
+
 ## File Structure
 
 - **code:**
